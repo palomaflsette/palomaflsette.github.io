@@ -230,6 +230,63 @@
             
          }
          
+         /* Mobile fixes */
+         @media (max-width: 768px) {
+            body {
+               overflow-x: hidden;
+               width: 100%;
+               max-width: 100vw;
+            }
+            
+            .w-container {
+               max-width: 100%;
+               padding: 0 15px;
+            }
+            
+            .section {
+               width: 100%;
+               max-width: 100vw;
+               overflow-x: hidden;
+            }
+            
+            .video-hero video {
+               object-fit: cover;
+               width: 100%;
+               height: 100%;
+            }
+            
+            .w-background-video {
+               overflow: hidden;
+               width: 100%;
+            }
+            
+            
+            
+            .nav-link-bg {
+               transition: all 0.3s ease;
+            }
+            
+            /* Fix video player issues */
+            .w-background-video-atom {
+               position: relative;
+            }
+            
+            .w-background-video-atom video {
+               width: 100% !important;
+               height: 100% !important;
+               object-fit: cover !important;
+            }
+            
+            /* Keep original navigation behavior but fix mobile display */
+            .nav-link {
+               transition: all 0.3s ease;
+            }
+            
+            .nav-link-bg {
+               transition: all 0.3s ease;
+            }
+         }
+         
          /* Elegant separators for other sections */
          .section.base::after {
             content: '';
@@ -916,22 +973,22 @@
                    <div class="social-row display-7">
                       <div class="soc-item">
                          <a href="https://www.instagram.com/palomalsett/" target="_blank">
-                         <span class="mbr-iconfont socicon-instagram socicon"></span>
+                         <i class="fab fa-instagram" style="font-size: 24px; color: white;"></i>
                          </a>
                       </div>
                       <div class="soc-item">
                          <a href="https://www.github.com/palomaflsette/" target="_blank">
-                         <span class="mbr-iconfont socicon-github socicon"></span>
+                         <i class="fab fa-github" style="font-size: 24px; color: white;"></i>
                          </a>
                       </div>
                       <div class="soc-item">
                          <a href="https://www.linkedin.com/in/paloma-sett/" target="_blank">
-                         <span class="mbr-iconfont socicon-linkedin socicon"></span>
+                         <i class="fab fa-linkedin" style="font-size: 24px; color: white;"></i>
                          </a>
                       </div>
                       <div class="soc-item">
                          <a href="mailto:pfls.sette@gmail.com">
-                         <span class="mbr-iconfont socicon-mail socicon"></span>
+                         <i class="fas fa-envelope" style="font-size: 24px; color: white;"></i>
                          </a>
                       </div>
                    </div>
