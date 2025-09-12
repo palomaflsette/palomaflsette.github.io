@@ -1,3 +1,201 @@
-# Ignore video files (too large for GitHub)
-assets/videos/*.mp4
-assets/videos/*.mov
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+dist/
+build/
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+logs/
+
+pids
+*.pid
+*.seed
+*.pid.lock
+
+coverage/
+*.lcov
+
+.nyc_output
+
+jspm_packages/
+
+.npm
+
+.eslintcache
+
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+.node_repl_history
+
+*.tgz
+
+.yarn-integrity
+
+.cache
+.parcel-cache
+
+.next
+
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+.fusebox/
+
+.dynamodb/
+
+.tern-port
+
+# Temporary folders
+tmp/
+temp/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Local development files
+local/
+dev/
+
+# Cache files
+.cache/
+cache/
+
+# Python cache (if using Python tools)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PHP cache
+*.php~
+
+# Ruby cache
+*.gem
+*.rbc
+
+# Java cache
+*.class
+
+# C/C++ cache
+*.o
+*.so
+*.dylib
+
+.webflow/
+
+.mobirise/
+
+server.log
+access.log
+error.log
+
+*.db
+*.sqlite
+*.sqlite3
+
+config.local.js
+config.local.json
+secrets.json
+
+test-results/
+coverage/
+
+docs/_build/
+
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+public/
+
+db.json
+.deploy*/
+
+
+*.orig
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+*.sublime-project
+*.sublime-workspace
+
+.atom/
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+local-config.*
+dev-config.*
+
+# IMPORTANT: Keep these files for your website
+# All HTML files
+!*.html
+# All CSS files  
+!*.css
+# All JS files
+!*.js
+# All image files
+!*.jpg
+!*.jpeg
+!*.png
+!*.gif
+!*.svg
+!*.webp
+# All asset directories
+!assets/
+!art-gallery/
