@@ -294,6 +294,51 @@
                display: none !important;
             }
             
+            /* Global video controls removal */
+            video::-webkit-media-controls {
+               display: none !important;
+            }
+            
+            video::-webkit-media-controls-panel {
+               display: none !important;
+            }
+            
+            video::-webkit-media-controls-play-button {
+               display: none !important;
+            }
+            
+            video::-webkit-media-controls-start-playback-button {
+               display: none !important;
+            }
+            
+            video::-webkit-media-controls-overlay-play-button {
+               display: none !important;
+            }
+            
+            video::-webkit-media-controls-timeline {
+               display: none !important;
+            }
+            
+            video::-webkit-media-controls-current-time-display {
+               display: none !important;
+            }
+            
+            video::-webkit-media-controls-time-remaining-display {
+               display: none !important;
+            }
+            
+            video::-webkit-media-controls-volume-slider {
+               display: none !important;
+            }
+            
+            video::-webkit-media-controls-mute-button {
+               display: none !important;
+            }
+            
+            video::-webkit-media-controls-fullscreen-button {
+               display: none !important;
+            }
+            
             /* Keep original navigation behavior but fix mobile display */
             .nav-link {
                transition: all 0.3s ease;
@@ -304,6 +349,55 @@
             .nav-link-bg {
                transition: all 0.3s ease;
             }
+         }
+         
+         /* Global video controls removal - works on all devices */
+         video {
+            pointer-events: none !important;
+         }
+         
+         video::-webkit-media-controls {
+            display: none !important;
+         }
+         
+         video::-webkit-media-controls-panel {
+            display: none !important;
+         }
+         
+         video::-webkit-media-controls-play-button {
+            display: none !important;
+         }
+         
+         video::-webkit-media-controls-start-playback-button {
+            display: none !important;
+         }
+         
+         video::-webkit-media-controls-overlay-play-button {
+            display: none !important;
+         }
+         
+         video::-webkit-media-controls-timeline {
+            display: none !important;
+         }
+         
+         video::-webkit-media-controls-current-time-display {
+            display: none !important;
+         }
+         
+         video::-webkit-media-controls-time-remaining-display {
+            display: none !important;
+         }
+         
+         video::-webkit-media-controls-volume-slider {
+            display: none !important;
+         }
+         
+         video::-webkit-media-controls-mute-button {
+            display: none !important;
+         }
+         
+         video::-webkit-media-controls-fullscreen-button {
+            display: none !important;
          }
          
          /* Elegant separators for other sections */
@@ -1210,6 +1304,29 @@
            });
          
           });
+         
+         // Force video autoplay and remove controls
+         document.addEventListener('DOMContentLoaded', function() {
+           // Force all videos to autoplay and remove controls
+           const videos = document.querySelectorAll('video');
+           videos.forEach(video => {
+             video.autoplay = true;
+             video.loop = true;
+             video.muted = true;
+             video.playsInline = true;
+             video.controls = false;
+             video.setAttribute('playsinline', '');
+             video.setAttribute('webkit-playsinline', '');
+             
+             // Remove all video controls
+             video.style.pointerEvents = 'none';
+             
+             // Force play
+             video.play().catch(e => {
+               console.log('Video autoplay failed:', e);
+             });
+           });
+         });
          
          // Thoughts Carousel JavaScript
          document.addEventListener('DOMContentLoaded', function() {
