@@ -354,6 +354,17 @@
          /* Global video controls removal - works on all devices */
          video {
             pointer-events: none !important;
+            -webkit-media-controls: none !important;
+            -webkit-media-controls-panel: none !important;
+            -webkit-media-controls-play-button: none !important;
+            -webkit-media-controls-start-playback-button: none !important;
+            -webkit-media-controls-overlay-play-button: none !important;
+            -webkit-media-controls-timeline: none !important;
+            -webkit-media-controls-current-time-display: none !important;
+            -webkit-media-controls-time-remaining-display: none !important;
+            -webkit-media-controls-volume-slider: none !important;
+            -webkit-media-controls-mute-button: none !important;
+            -webkit-media-controls-fullscreen-button: none !important;
          }
          
          video::-webkit-media-controls {
@@ -739,7 +750,7 @@
                               </div>
                               <div class="absolute-video">  
                                  <div data-poster-url="" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="video-services w-background-video w-background-video-atom">
-                                    <video src="assets/videos/gademo-video_1.mp4" alt="Gademo Logo" style="width: 100%; height: 100%; object-fit: cover;" autoplay loop muted playsinline></video>
+                                    <img src="assets/images/gademo.png" alt="Gademo Logo" style="width: 100%; height: 100%; object-fit: cover;">
                                  </div>
                               </div>
                            </div>
@@ -773,7 +784,7 @@
                               </div>
                               <div class="absolute-video">
                                  <div data-poster-url="" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="video-services w-background-video w-background-video-atom">
-                                    <video src="assets/videos/video_insurup.mp4" alt="InsurUP Logo" style="width: 100%; height: 100%; object-fit: cover;" autoplay loop muted playsinline></video>
+                                    <img src="assets/images/gademo.png" alt="InsurUP Logo" style="width: 100%; height: 100%; object-fit: cover;">
                                  </div>
                               </div>
                            </div>
@@ -806,7 +817,7 @@
                               </div>
                               <div class="absolute-video">
                                  <div data-poster-url="" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="video-services w-background-video w-background-video-atom">
-                                    <video src="assets/videos/mustem_video_1.mp4" alt="Mustem Logo" style="width: 100%; height: 100%; object-fit: cover;" autoplay loop muted playsinline></video>
+                                    <img src="assets/images/gademo.png" alt="Mustem Logo" style="width: 100%; height: 100%; object-fit: cover;">
                                  </div>
                               </div>
                            </div>
@@ -861,7 +872,7 @@
                               </div>
                               <div class="absolute-video">
                                  <div data-poster-url="" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="video-services w-background-video w-background-video-atom">
-                                    <video src="assets/videos/finControl_video_1.mp4" alt="FinControl Logo" style="width: 100%; height: 100%; object-fit: cover;" autoplay loop muted playsinline></video>
+                                    <img src="assets/images/gademo.png" alt="FinControl Logo" style="width: 100%; height: 100%; object-fit: cover;">
                                  </div>
                               </div>
                            </div>
@@ -888,7 +899,7 @@
                               </div>
                               <div class="absolute-video">
                                  <div data-poster-url="" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="video-services w-background-video w-background-video-atom">
-                                    <video src="assets/videos/lorepuc_video_2.mp4" alt="Lore PUC Logo" style="width: 100%; height: 100%; object-fit: cover;" autoplay loop muted playsinline></video>
+                                    <img src="assets/images/gademo.png" alt="Lore PUC Logo" style="width: 100%; height: 100%; object-fit: cover;">
                                  </div>
                               </div>
                            </div>
@@ -1310,21 +1321,44 @@
            // Force all videos to autoplay and remove controls
            const videos = document.querySelectorAll('video');
            videos.forEach(video => {
+             // Remove all attributes that might cause controls
+             video.removeAttribute('controls');
+             video.removeAttribute('preload');
+             
+             // Set autoplay attributes
+             video.setAttribute('autoplay', '');
+             video.setAttribute('loop', '');
+             video.setAttribute('muted', '');
+             video.setAttribute('playsinline', '');
+             video.setAttribute('webkit-playsinline', '');
+             
+             // Force properties
              video.autoplay = true;
              video.loop = true;
              video.muted = true;
              video.playsInline = true;
              video.controls = false;
-             video.setAttribute('playsinline', '');
-             video.setAttribute('webkit-playsinline', '');
              
-             // Remove all video controls
+             // Remove all video controls with CSS
              video.style.pointerEvents = 'none';
+             video.style.outline = 'none';
+             video.style.border = 'none';
+             
+             // Add CSS to completely hide controls
+             video.style.setProperty('-webkit-media-controls', 'none', 'important');
+             video.style.setProperty('-webkit-media-controls-panel', 'none', 'important');
+             video.style.setProperty('-webkit-media-controls-play-button', 'none', 'important');
              
              // Force play
-             video.play().catch(e => {
-               console.log('Video autoplay failed:', e);
-             });
+             setTimeout(() => {
+               video.play().catch(e => {
+                 console.log('Video autoplay failed:', e);
+                 // Try again after a short delay
+                 setTimeout(() => {
+                   video.play().catch(e2 => console.log('Second attempt failed:', e2));
+                 }, 1000);
+               });
+             }, 500);
            });
          });
          
