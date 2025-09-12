@@ -234,6 +234,7 @@
          @media (max-width: 768px) {
             body {
                overflow-x: hidden;
+               width: 100%;
             }
             
             .video-hero video {
@@ -244,12 +245,23 @@
             
             .w-background-video {
                overflow: hidden;
+               width: 100%;
             }
             
             /* Fix white space on mobile */
             .section {
                width: 100%;
                overflow-x: hidden;
+               max-width: 100vw;
+            }
+            
+            /* Fix navigation colors on mobile */
+            .nav-link {
+               color: #2A2119 !important;
+            }
+            
+            .nav-link-bg {
+               background-color: rgba(42, 33, 25, 0.1) !important;
             }
          }
          
