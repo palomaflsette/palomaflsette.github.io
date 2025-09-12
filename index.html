@@ -349,6 +349,164 @@
             .nav-link-bg {
                transition: all 0.3s ease;
             }
+            
+            /* Hero section mobile layout - POSIÇÕES FIXAS */
+            .master-hero-section {
+               padding: 0;
+               text-align: center;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               min-height: 100vh;
+               justify-content: flex-start;
+               position: relative;
+            }
+            
+            /* POSIÇÃO LARANJA - Hello alinhado à esquerda */
+            .logo-wrap-hero {
+               position: absolute;
+               top: 80px;
+               left: 20px;
+               z-index: 10;
+               max-width: 300px;
+               text-align: left;
+            }
+            
+            .logo-hero {
+               max-width: 250px;
+               width: 100%;
+               height: auto;
+               display: block !important;
+               visibility: visible !important;
+               opacity: 1 !important;
+               margin-right: auto;
+            }
+            
+            /* POSIÇÃO AZUL - "I'm Paloma" alinhado à esquerda */
+            .bottom-tile-hero {
+               position: absolute;
+               top: 50%;
+               left: 20px;
+               transform: translateY(-50%);
+               width: 100%;
+               max-width: 300px;
+               text-align: left;
+               z-index: 10;
+            }
+            
+            .text-wrap-hero-middle {
+               margin-bottom: 0;
+               width: 100%;
+               text-align: left;
+            }
+            
+            .label.hero-animated {
+               font-size: 18px;
+               line-height: 1.5;
+               margin-bottom: 0;
+               text-align: left;
+            }
+            
+            /* POSIÇÃO VERDE - Botão mais para baixo */
+            .button-lets-go {
+               position: absolute;
+               bottom: 5vh;
+               left: 5%;
+               z-index: 10;
+            }
+            
+            .nav-link-button {
+               display: inline-block;
+               padding: 15px 35px;
+               font-size: 16px;
+            }
+            
+            /* Video/GIF background mobile */
+            .video-hero {
+               min-height: 100vh;
+            }
+         }
+         
+         @media (max-width: 480px) {
+            /* POSIÇÃO LARANJA - Hello alinhado à esquerda (celular pequeno) */
+            .logo-wrap-hero {
+               top: 60px;
+               left: 15px;
+               max-width: 250px;
+            }
+            
+            .logo-hero {
+               max-width: 200px;
+            }
+            
+            /* POSIÇÃO AZUL - "I'm Paloma" alinhado à esquerda (celular pequeno) */
+            .bottom-tile-hero {
+               left: 15px;
+               max-width: 250px;
+            }
+            
+            .label.hero-animated {
+               font-size: 16px;
+               margin-bottom: 0;
+            }
+            
+            /* POSIÇÃO VERDE - Botão mais para baixo (celular pequeno) */
+            .button-lets-go {
+               bottom: 1vh;
+               left: 5%;
+            }
+            
+            .nav-link-button {
+               padding: 12px 30px;
+               font-size: 14px;
+            }
+         }
+         
+         /* iPhone SE e dispositivos muito pequenos */
+         @media (max-width: 375px) {
+            .logo-wrap-hero {
+               top: 50px;
+               left: 10px;
+               max-width: 200px;
+            }
+            
+            .logo-hero {
+               max-width: 150px;
+            }
+            
+            .bottom-tile-hero {
+               left: 10px;
+               max-width: 200px;
+            }
+            
+            .label.hero-animated {
+               font-size: 14px;
+               margin-bottom: 0;
+            }
+            
+            .button-lets-go {
+               bottom: -1vh;
+               left: 5%;
+            }
+            
+            .nav-link-button {
+               padding: 10px 25px;
+               font-size: 13px;
+            }
+         }
+         
+         /* Dispositivos muito grandes (Samsung S8 Ultra, tablets grandes) */
+         @media (min-width: 1024px) and (max-width: 1366px) {
+            .button-lets-go {
+               bottom: 6vh;
+            }
+         }
+         
+         /* Dispositivos ultra grandes (Samsung S8 Ultra landscape) */
+         @media (min-width: 1367px) {
+            .button-lets-go {
+               bottom: 8vh;
+            }
          }
          
          /* Global video controls removal - works on all devices */
@@ -540,13 +698,13 @@
       </div>
       <section id="hero" color="bg" class="section hero-section">
          <div   data-autoplay="true" data-loop="true" data-wf-ignore="true" class="video-hero w-background-video w-background-video-atom">
-            <img src="assets/images/medieval_tech.gif" alt="Medieval Tech" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;" data-wf-ignore="true">
-            <div class="w-layout-blockcontainer main-container w-container">
+            <img src="assets/images/medieval_tech.gif" alt="Medieval Tech" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1;" data-wf-ignore="true">
+            <div class="w-layout-blockcontainer main-container w-container" style="position: relative; z-index: 2;">
                <div class="master-hero-section">
                   <div class="logo-wrap-hero"><img src="assets/images/hello.png" loading="lazy" alt="" class="logo-hero"/></div>
                   <div class="bottom-tile-hero">
                      <div class="byq-logo"></div>
-                     <div class="text-wrap-hero-middle">
+                      <div class="text-wrap-hero-middle">
                         <div class="label hero-animated" style="color: #2A2119;"><strong>Here you will find past projects, current works and also some texts about random things I am interested in.</strong><br/></div>
                         <div class="button-lets-go">
                            <a href="index.html#base" class="nav-link-button w-button fade-together">
