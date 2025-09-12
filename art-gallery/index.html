@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.2.0, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <meta name="description" content="My name is Paloma Sette, I'm a PhD student at Harvard, and here I share things about myself.">
+  
+  
+  <title>L'arte di Sette</title>
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  <style>
+  
+    #menina-frio  {
+        width: 110%; 
+        height: auto;
+        margin: 0 auto;
+        pointer-events: none;
+        user-select: none;
+    }
+    
+    .mbr-text.mbr-fonts-style.display-7 {
+        text-align: justify !important;
+        text-justify: inter-word;
+    }
+
+    .mbr-text-p.mbr-fonts-style.display-7 {
+        text-align:center !important;
+        text-justify: inter-word;
+    }
+    
+    /* Minimalist Layout */
+    .minimalist-poem-section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+    
+    .minimalist-image {
+        padding-right: 5%;
+        margin: 0 auto 3rem auto;
+        max-width: 80%;
+        width: 100%;
+    }
+
+    .minimalist-image.crianca {
+        margin-bottom: -5% !important;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .minimalist-image.crianca img {
+        width: 120%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    
+    .minimalist-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    
+    .minimalist-title {
+        margin-top: -4% !important;
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 1rem;
+        color: #444;
+        font-style: italic;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    .minimalist-title.crianca {
+        margin-top: 4% !important;
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 0.95rem;
+        color: #444;
+        font-style: italic;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.5px;
+        text-align: center;
+        white-space: nowrap;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .minimalist-technique {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 0.75rem;
+        color: #666;
+        font-style: normal;
+        margin-bottom: 2rem;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+        font-weight: 300;
+        padding-top: 0.2rem;
+        margin-top: 0;
+    }
+    
+    .minimalist-text {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 1.1rem;
+        line-height: 2;
+        color: #333;
+        text-align: justify;
+        column-count: 2;
+        column-gap: 3rem;
+        column-rule: 1px solid #eee;
+        margin: 0;
+        padding: 0;
+    }
+
+    .minimalist-text.alternative {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 1.1rem;
+        line-height: 2;
+        color: #333;
+        text-align: justify;
+        column-count: 1;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Left Side Poem Layout */
+    .symmetric-poem-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+    
+    .poem-left {
+        flex: 0 0 50%;
+        text-align: right;
+        padding-right: 0.5rem;
+    }
+    
+    .poem-center {
+        flex: 0 0 50%;
+        text-align: center;
+        padding-left: 0.5rem;
+        margin-bottom: -5rem;
+    }
+    
+    .poem-right {
+        display: none;
+    }
+    
+    .poem-stanza {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 1.1rem;
+        line-height: 2.5 !important;
+        color: #333;
+        margin-bottom: 1.8rem;
+    }
+    
+    .poem-stanza:last-child {
+        margin-bottom: 0;
+    }
+    
+    .poem-stanza p {
+        margin: 0;
+        padding: 0;
+        line-height: 2.5 !important;
+    }
+    
+    /* Força o espaçamento entre linhas */
+    .symmetric-poem-container .poem-stanza p {
+        line-height: 1.5 !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .symmetric-poem-container .poem-stanza p:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    .symmetric-image {
+        margin: 0 auto 2rem auto;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .symmetric-image img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        margin: 0 auto;
+    }
+    
+    .symmetric-title {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 1rem;
+        color: #444;
+        font-style: italic;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.5px;
+        text-align: center;
+    }
+    
+    .symmetric-technique {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 0.75rem;
+        color: #666;
+        font-style: normal;
+        margin-bottom: 0;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+        font-weight: 300;
+        text-align: center;
+    }
+    
+    /* Mobile responsiveness for left side layout */
+    @media (max-width: 768px) {
+        .symmetric-poem-container {
+            flex-direction: column;
+            gap: 2rem;
+            padding: 1rem;
+            max-width: 100%;
+        }
+        
+        .poem-left {
+            flex: none;
+            width: 100%;
+            text-align: center;
+            padding-right: 0;
+            order: 2;
+            margin-top: -3rem;
+        }
+        
+        .poem-center {
+            flex: none;
+            width: 100%;
+            text-align: center;
+            padding-left: 0;
+            order: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .poem-stanza {
+            font-size: 1rem;
+            line-height: 2.3 !important;
+            margin-bottom: 1.5rem;
+        }
+        
+        .poem-stanza p {
+            line-height: 2.3 !important;
+        }
+        
+        /* Força o espaçamento entre linhas no mobile */
+        .symmetric-poem-container .poem-stanza p {
+            line-height: 2.3 !important;
+            margin-bottom: 0.4rem !important;
+        }
+        
+        .symmetric-poem-container .poem-stanza p:last-child {
+            margin-bottom: 0 !important;
+        }
+        
+        .symmetric-image {
+            margin-bottom: 2rem;
+        }
+        
+        .symmetric-image img {
+            max-width: 300px;
+        }
+        
+        .symmetric-title {
+            font-size: 1.2rem;
+        }
+        
+        .symmetric-technique {
+            font-size: 0.7rem;
+        }
+    }
+    
+    .minimalist-technique.crianca {
+        text-align: center;
+        margin-top: 0.3rem;
+        margin-bottom: 2rem;
+        white-space: nowrap;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .minimalist-text p {
+        margin: 0;
+        padding: 0;
+        text-align: justify;
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 2;
+        color: #333;
+    }
+    
+    /* Mobile responsiveness for minimalist layout */
+    @media (max-width: 768px) {
+        .minimalist-poem-section {
+            max-width: 95%;
+            padding: 2rem 1rem;
+        }
+        
+        .minimalist-image {
+            padding-right: 7% !important;
+            max-width: 100%;
+            margin-bottom: 1rem;
+        }
+        
+        .minimalist-title {
+            
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .minimalist-technique {
+            font-size: 0.7rem;
+            margin-bottom: 1.5rem;
+            padding-top: 0.1rem;
+        }
+        
+        .minimalist-image.crianca {
+            max-width: 90%;
+        }
+        
+        .minimalist-image.crianca img {
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        .minimalist-title.crianca {
+            font-size: 0.85rem;
+            white-space: normal;
+        }
+        
+        .minimalist-technique.crianca {
+            font-size: 0.65rem;
+            white-space: normal;
+        }
+        
+        .minimalist-text {
+            column-count: 1;
+            column-gap: 0;
+            column-rule: none;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
+        .minimalist-text p {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+    }
+    
+    /* Elegant Artwork Carousel Styles */
+    .artwork-carousel-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .artwork-carousel-wrapper {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    
+    .artwork-carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .artwork-slide {
+        min-width: 100%;
+        flex-shrink: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        display: none;
+    }
+    
+    .artwork-slide.active {
+        opacity: 1;
+        display: block;
+    }
+    
+    .artwork-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .artwork-item {
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    
+    .artwork-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .artwork-item img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        transition: box-shadow 0.3s ease;
+    }
+    
+    .artwork-item:hover img {
+        box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    }
+    
+    .artwork-legend {
+        margin-top: 1rem;
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 1rem;
+        color: #333;
+        font-style: italic;
+    }
+    
+    .artwork-year {
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 0.3rem;
+    }
+    
+    .artwork-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        gap: 0.5rem;
+    }
+    
+    .artwork-dots .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ddd;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .artwork-dots .dot.active {
+        background-color: #333;
+    }
+    
+    /* Modal Styles */
+    .artwork-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+        animation: fadeIn 0.3s ease;
+    }
+    
+    .artwork-modal.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .modal-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .modal-image {
+        max-width: 100%;
+        max-height: 70vh;
+        object-fit: contain;
+        border-radius: 8px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .modal-close {
+        position: absolute;
+        top: -50px;
+        right: -10px;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        background: rgba(0,0,0,0.7);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease;
+        z-index: 1001;
+    }
+    
+    .modal-close:hover {
+        background: rgba(0,0,0,0.9);
+    }
+    
+    .modal-legend {
+        color: white;
+        margin-top: 1.5rem;
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 1.2rem;
+        font-style: italic;
+        text-align: center;
+        background: rgba(0,0,0,0.7);
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+    }
+    
+    .modal-year {
+        color: #fff;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        text-align: center;
+        background: rgba(0,0,0,0.6);
+        padding: 0.4rem 1rem;
+        border-radius: 6px;
+        backdrop-filter: blur(10px);
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        .artwork-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            padding: 0 0.5rem;
+        }
+        
+        .artwork-item img {
+            height: 250px;
+        }
+        
+        .artwork-legend {
+            font-size: 0.9rem;
+        }
+        
+        .artwork-year {
+            font-size: 0.8rem;
+        }
+        
+        .modal-content {
+            max-width: 95%;
+            max-height: 95%;
+            padding: 1rem;
+        }
+        
+        .modal-image {
+            max-height: 60vh;
+        }
+        
+        .modal-close {
+            top: -40px;
+            right: -5px;
+            width: 35px;
+            height: 35px;
+            font-size: 1.5rem;
+        }
+        
+        .modal-legend {
+            font-size: 1rem;
+            margin-top: 1rem;
+            padding: 0.6rem 1.2rem;
+        }
+        
+        .modal-year {
+            font-size: 0.9rem;
+            padding: 0.3rem 0.8rem;
+        }
+    }
+    
+    /* Second Carousel - Lápis, Carvão e Devaneios */
+    .drawings-carousel-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .drawings-carousel-wrapper {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    
+    .drawings-carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .drawing-slide {
+        min-width: 100%;
+        flex-shrink: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        display: none;
+    }
+    
+    .drawing-slide.active {
+        opacity: 1;
+        display: block;
+    }
+    
+    .drawing-slide .row {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+    
+    .drawing-slide .item-wrapper {
+        margin-bottom: 2rem;
+        height: 100%;
+    }
+    
+    .drawing-slide .item-img img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+    
+    .drawing-slide .item-img img:hover {
+        transform: scale(1.05);
+    }
+    
+    .drawing-slide .item-content {
+        padding: 1rem 0;
+    }
+    
+    .drawing-slide .item-title {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+    }
+    
+    .drawing-slide .item-subtitle {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 0.9rem;
+        color: #666;
+        font-style: italic;
+        margin-bottom: 1rem;
+    }
+    
+    .drawing-slide .mbr-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 1rem;
+    }
+    
+    .drawing-slide .text-primary {
+        color: #007bff !important;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .drawing-slide .text-primary:hover {
+        text-decoration: underline;
+    }
+    
+    .drawings-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        gap: 0.5rem;
+    }
+    
+    .drawings-dots .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ddd;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .drawings-dots .dot.active {
+        background-color: #333;
+    }
+    
+    /* Mobile responsiveness for drawings carousel */
+    @media (max-width: 768px) {
+        .drawings-carousel-container {
+            padding: 0 1rem;
+        }
+        
+        .drawing-slide .row {
+            justify-content: center !important;
+            margin: 0 !important;
+        }
+        
+        .drawing-slide .col-12 {
+            display: flex;
+            justify-content: center;
+            padding: 0 1rem;
+        }
+        
+        .drawing-slide .item-wrapper {
+            width: 100%;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        
+        .drawing-slide .item-img {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .drawing-slide .item-img img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+    
+    .projects-dots .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ccc;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .projects-dots .dot.active {
+        background-color: #333;
+    }
+    
+    .projects-dots .dot:hover {
+        background-color: #666;
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .projects-dots {
+            margin-top: 1.5rem;
+        }
+    }
+  </style>
+  
+  
+  
+</head>
+<body>
+  
+  <section class="menu menu3 cid-spf7Pv79eu" once="menu" id="menu3-1">
+    
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="index.html">
+                        <img src="assets/images/brasao-vetorizado.png" alt="Harvard" style="height: 3rem;">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-primary display-4" href="index.html">L'arte di Sette</a></span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-primary display-4" href="index.html#features16-27">
+                            Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link link text-primary display-4" href="index.html#image1-6">
+                            Trabalhos</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link link text-primary display-4" href="home.html#content2-a"></a> -->
+                    </li></ul>
+                <div class="icons-menu">
+                    <a class="iconfont-wrapper" href="https://www.instagram.com/palomalsett/" target="_blank">
+                        <span class="p-2 mbr-iconfont socicon-instagram socicon" style="color: rgb(12, 15, 10); fill: rgb(12, 15, 10);"></span>
+                    </a>
+                    <!-- <a class="iconfont-wrapper" href="https://www.linkedin.com/in/paloma-sett/" target="_blank">
+                        <span class="p-2 mbr-iconfont socicon-linkedin socicon" style="color: rgb(12, 15, 10); fill: rgb(12, 15, 10);"></span>
+                    </a> -->
+                    <a class="iconfont-wrapper" href="mailto:pfls.sette@gmail.com">
+                        <span class="p-2 mbr-iconfont socicon-mail socicon"></span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section class="header1 cid-spf7Mho91N mbr-fullscreen mbr-parallax-background" id="header1-0">
+
+    
+
+    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(255, 255, 255);"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1">L'arte di Sette</h1>
+                
+                <p class="mbr-text mbr-fonts-style display-7"><strong>
+                    Cada obra é uma conversa. Explore aqui os diálogos que tenho travado com a tela, os pixels e as ideias.</strong></p>
+                <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4" href="index.html#features16-27">Explorar</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features15 cid-trFaaslIvq" id="features16-27">
+
+    
+
+    
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg">
+                    <div class="text-wrapper">
+                        <h1 class="card-title mbr-fonts-style display-2">
+                            <i>Ex Duobus Unum. In Infinito Conveniunt.</i></h1>
+                        <p class="mbr-text mbr-fonts-style mb-4 display-4">Este espaço explora o ponto de fuga no infinito, o ponto onde duas retas paralelas se tocam para se tornar uma só. Vivemos na fronteira, na intersecção criativa de dois mundos que se buscam. É a vitrine de um laboratório dedicado à prova de que toda reta paralela anseia por seu encontro no infinito. Caminhos distintos. Um horizonte compartilhado. Via da expressão. Via da investigação. A distinção entre as duas se dissolve na verdade.
+                        <br>
+                        <p class="mbr-text mbr-fonts-style mb-4 display-4">Meu nome é Paloma Sette e eu sou entusiasta das duas retas paralelas que tendem a se encontrar no infinito.
+                        </p>    
+                        <br></p>
+                        <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4" href="projectivestetics.html">Estética Projetiva</a></div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5">
+                    <div class="image-wrapper">
+                        <img src="assets/images/paloma-dark-mold.png" alt="Paloma Sette">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="image1 cid-spf9BK55ZU" id="image1-6">
+    <div class="container">
+        <div class="minimalist-poem-section">
+            <!-- Small centered image -->
+            <div class="minimalist-image">
+                <img src="assets/images/menina-frio.jpg" alt="menina-frio" id="menina-frio">
+                </div>
+            
+            <!-- Elegant title -->
+            <p class="minimalist-title">Axiomas do Frio - <strong>Rio de Janeiro, 2014</strong></p>
+            
+            <!-- Art technique -->
+            <p class="minimalist-technique">Carvão vegetal sobre C à Grain</p>
+            
+            <!-- Text in columns -->
+            <div class="minimalist-text">
+                <p>Se x é a soma de todas as quantidades de si mesmo, então x é o frio.
+                    O frio contém a medida de todos os invernos.
+                    
+                    O inverno dura quatro meses: de Junho a Setembro.
+                    O verão ocupa quatro meses.
+                    Entre eles, há quatro meses suspensos, indecisos entre extremos.
+                    O ano se divide como um círculo em três partes iguais: frio, calor e incerteza.
+                    
+                    Em Outubro, a chuva marca a passagem.
+                    Em Novembro, as árvores florescem.
+                    Em Março, os alunos voltam.
+                    Em Junho, as bibliotecas ficam plenas.
+                    
+                    Se x é Junho, mês em que os livros multiplicam-se como folhas,
+                    então x se aproxima do infinito — 
+                    assim como o frio se repete infinitamente na história do tempo.
+                    
+                    Nunca sentirei tanto frio agora quanto no futuro, pois o futuro é sempre mais vasto que o presente.
+                    Se o frio é eterno em sua repetição, 
+                    o calor, seu espelho, compartilha da mesma eternidade.
+                    O futuro do frio é infinito. O futuro do calor é o futuro do frio.
+                    
+                    As bibliotecas, como o tempo, parecem infinitas:
+                    quase sempre vazias, mas em Junho tornam-se intransponíveis,
+                    como se apenas um instante bastasse para revelar a abundância do infinito.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="image2 cid-spf9O9tYQE" id="image2-7">
+    
+
+    
+
+    <div class="container">
+        <div class="symmetric-poem-container">
+            <!-- Left side - All stanzas -->
+            <div class="poem-left">
+                <div class="poem-stanza">
+                    <p>Ponto zero. O silêncio antes da forma.<br>
+                    A mão paira sobre a tela em branco,<br>
+                    Um deus calmo na véspera de um universo.</p>
+                </div>
+                <div class="poem-stanza">
+                    <p>Então, a fissura. A geometria do crânio cede.<br>
+                    A mente, não mais contida, transborda.<br>
+                    Jorram-se os rios negros.<br>
+                    Matéria escura do possível:<br>
+                    Emaranhado de neurônios,<br>
+                    Caligrafia do subconsciente.</p>
+            </div>
+                <div class="poem-stanza">
+                    <p>Curvas dos rios. Musas sem nome.<br>
+                    Arquétipos de carne e sonho.<br>
+                    Ideias puras, vulneráveis.<br>
+                    Das ideias, flores. Fertilidade do caos.</p>
+                </div>
+                <div class="poem-stanza">
+                    <p>Fiação encefálica.<br>
+                    Maquinário inefável, tecelagem do sublime.<br>
+                    O leme navega na enchente da alma.<br>
+                    Mapa. Geografia visível. Neurologia invisível.<br>
+                    Autorretrato do que o cérebro sonhou.</p>
+                </div>
+            </div>
+            
+            <!-- Center - Image -->
+            <div class="poem-center">
+                <div class="symmetric-image">
+                    <img src="assets/images/colagem.jpg" alt="Colagem, lápis e hidrocor">
+                    <p class="symmetric-title">
+                        Colagem, lápis e hidrocor - <strong>Trabalho de Artes Visuais, 2011</strong>
+                    </p>
+                    <p class="symmetric-technique">Papel Layout</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery3 cid-spf9XaoCjb" id="gallery3-9">
+    <div class="container-fluid">
+        <div class="mbr-section-head">
+            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>Oléo Sobre Tela</strong></h4>
+            
+        </div>
+        
+        <!-- Elegant Artwork Carousel -->
+        <div class="artwork-carousel-container mt-4">
+            <div class="artwork-carousel-wrapper">
+                <div class="artwork-carousel-track" id="artworkCarouselTrack">
+                    
+                    <!-- Slide 1 -->
+                    <div class="artwork-slide active">
+                        <div class="artwork-grid">
+                            <div class="artwork-item" data-image="assets/images/veneza_serenata.jpg" data-title="Veneza Serenata" data-year="2015">
+                                <img src="assets/images/veneza_serenata.jpg" alt="Veneza Serenata">
+                                <div class="artwork-legend">Veneza Serenata</div>
+                                <div class="artwork-year">2015</div>
+                            </div>
+                            <div class="artwork-item" data-image="assets/images/quadro1.jpg" data-title="Caminho sob o Flamboyant" data-year="2009">
+                                <img src="assets/images/quadro1.jpg" alt="Caminho sob o Flamboyant">
+                                <div class="artwork-legend">Caminho sob o Flamboyant</div>
+                                <div class="artwork-year">2009</div>
+                            </div>
+                            <div class="artwork-item" data-image="assets/images/quadro2.jpg" data-title="Tulipas em Rosa e Lilás" data-year="2010">
+                                <img src="assets/images/quadro2.jpg" alt="Tulipas em Rosa e Lilás">
+                                <div class="artwork-legend">Tulipas em Rosa e Lilás</div>
+                                <div class="artwork-year">2010</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="artwork-slide">
+                        <div class="artwork-grid">
+                            <div class="artwork-item" data-image="assets/images/quadro3.jpg" data-title="Refúgio no Vale" data-year="2010">
+                                <img src="assets/images/quadro3.jpg" alt="Refúgio no Vale">
+                                <div class="artwork-legend">Refúgio no Vale</div>
+                                <div class="artwork-year">2010</div>
+                            </div>
+                            <div class="artwork-item" data-image="assets/images/quadro4.jpg" data-title="A Dama do Lago" data-year="2011">
+                                <img src="assets/images/quadro4.jpg" alt="A Dama do Lago">
+                                <div class="artwork-legend">A Dama do Lago</div>
+                                <div class="artwork-year">2011</div>
+                            </div>
+                            <div class="artwork-item" data-image="assets/images/quadro5.jpg" data-title="Repouso do Pescador" data-year="2012">
+                                <img src="assets/images/quadro5.jpg" alt="Repouso do Pescador">
+                                <div class="artwork-legend">Repouso do Pescador</div>
+                                <div class="artwork-year">2012</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="artwork-slide">
+                        <div class="artwork-grid">
+                            <div class="artwork-item" data-image="assets/images/quadro6.jpg" data-title="Reflexos de Outono" data-year="2014">
+                                <img src="assets/images/quadro6.jpg" alt="Reflexos de Outono">
+                                <div class="artwork-legend">Reflexos de Outono</div>
+                                <div class="artwork-year">2014</div>
+                            </div>
+                            <div class="artwork-item" data-image="assets/images/quadro7.jpg" data-title="Natureza Morta em Ultramar" data-year="2014">
+                                <img src="assets/images/quadro7.jpg" alt="Natureza Morta em Ultramar">
+                                <div class="artwork-legend">Natureza Morta em Ultramar</div>
+                                <div class="artwork-year">2014</div>
+                            </div>
+                            <div class="artwork-item" data-image="assets/images/lagoa-azul.JPG" data-title="Lagoa Azul" data-year="2012">
+                                <img src="assets/images/lagoa-azul.jpg" alt="Lagoa Azul">
+                                <div class="artwork-legend">Lagoa Azul</div>
+                                <div class="artwork-year">2012</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Dots -->
+            <div class="artwork-dots" id="artworkDots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+        
+        <!-- Modal for Image Viewing -->
+        <div class="artwork-modal" id="artworkModal">
+            <div class="modal-content">
+                <span class="modal-close" id="modalClose">&times;</span>
+                <img class="modal-image" id="modalImage" src="" alt="">
+                <div class="modal-legend" id="modalLegend"></div>
+                <div class="modal-year" id="modalYear"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="image2 cid-spf9O9tYQE" id="image2-7">
+    <div class="container-fluid">
+        <div class="mbr-section-head">
+            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>Lápis, Carvão e Devaneios em C à Grain</strong></h4>
+        </div>
+        
+        <!-- Drawings Carousel -->
+        <div class="drawings-carousel-container mt-4">
+            <div class="drawings-carousel-wrapper">
+                <div class="drawings-carousel-track" id="drawingsCarouselTrack">
+                    
+                    <!-- Drawing Slide 1 -->
+                    <div class="drawing-slide active">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6 col-lg-4">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <a href="pardaisbike.html"><img src="assets/images/menina-pedalando.jpg" alt="A Quem Possa Ler"></a>
+                    </div>
+                    <div class="item-content">
+                                        <h5 class="item-title"><strong>A Quem Possa Ler</strong></h5>
+                                        <h6 class="item-subtitle">
+                                            <em>Rio de Janeiro, 2014</em></h6>
+                                        <p class="mbr-text">
+                                            Voareis, pardais, e levareis minhas cartas a quem possa ler. <a href="menina-frio.html" class="text-primary">Read more..</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
+                                <div class="item-wrapper">
+                                    <div class="item-img">
+                                        <a href="crianca-silencio.html"><img src="assets/images/desenho-crianca.jpg" alt="A Criança que Media o Silêncio"></a>
+                                    </div>
+                                    <div class="item-content">
+                                        <h5 class="item-title"><strong>A Criança que Media o Silêncio</strong></h5>
+                                        <h6 class="item-subtitle">
+                                            <em>Rio de Janeiro, 2012</em></h6>
+                                        <p class="mbr-text">
+                                            Certa vez, uma criança delgada sentou-se ao meu lado. Tinha gestos quietos e um olhar distante. <a href="crianca-silencio.html" class="text-primary">Read more..</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 d-none d-lg-block">
+                                <div class="item-wrapper">
+                                    <div class="item-img">
+                                        <a href="olho.html"><img src="assets/images/olho.jpg" alt="Captador de Fótons"></a>
+                                    </div>
+                                    <div class="item-content">
+                                        <h5 class="item-title"><strong>Captador de Fótons</strong></h5>
+                                        <h6 class="item-subtitle">
+                                            <em>Rio de Janeiro, 2020</em></h6>
+                                        <p class="mbr-text">
+                                            Dispositivo óptico captador de fótons, Máquina fria que mapeia o mundo em luz e sombra. <a href="olho.html" class="text-primary">Read more..</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Drawing Slide 2 -->
+                    <div class="drawing-slide">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="item-wrapper">
+                                    <div class="item-img">
+                                        <a href="indio.html"><img src="assets/images/indio-sob-mesa.jpg" alt="Retrato Indígena"></a>
+                                    </div>
+                                    <div class="item-content">
+                                        <h5 class="item-title"><strong>Retrato Indígena</strong></h5>
+                                        <h6 class="item-subtitle">
+                                            <em>Rio de Janeiro, 2018</em></h6>
+                                        <p class="mbr-text">
+                                            Lápis de cor sobre papel Bristol. Homenagem à cultura indígena através do retrato. <a href="indio.html" class="text-primary">Read more..</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                                        <a href="umbrella.html"><img src="assets/images/umbrella.jpg" alt="O Guarda-chuva"></a>
+                    </div>
+                    <div class="item-content">
+                                        <h5 class="item-title"><strong>O Guarda-chuva</strong></h5>
+                                        <h6 class="item-subtitle">
+                                            <em>Bristol, 2017</em></h6>
+                                        <p class="mbr-text">
+                                            Carvão e lápis sobre papel Bristol. Estudo de luz e sombra em um objeto cotidiano. <a href="umbrella.html" class="text-primary">Read more..</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 d-none d-lg-block">
+                                <div class="item-wrapper">
+                                    <div class="item-img">
+                                        <a href="tecidos.html"><img src="assets/images/tecidos.jpg" alt="Estudo de Tecidos"></a>
+                                    </div>
+                                    <div class="item-content">
+                                        <h5 class="item-title"><strong>Tecidos e Sombras</strong></h5>
+                                        <h6 class="item-subtitle">
+                                            <em>São Paulo, 2020</em></h6>
+                                        <p class="mbr-text">
+                                            Lápis e carvão sobre papel Bristol. Exploração de texturas e dobras em diferentes materiais. <a href="tecidos.html" class="text-primary">Read more..</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        
+                </div>
+            </div>
+            
+            <!-- Navigation Dots -->
+            <div class="drawings-dots" id="drawingsDots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="contacts4 cid-spfb4vbmZg" id="contacts4-d">
+</section>
+
+<!-- Footer -->
+<section class="footer1 cid-spfaNkdhSD" once="footers" id="footer1-b">
+    <div class="container">
+        <div class="row mbr-white">
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                    <a href="index.html" class="text-white text-primary"><strong>Home</strong></a></h5>
+                <ul class="list mbr-fonts-style display-4">
+                    <li class="mbr-text item-wrap"><br></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                    <a href="index.html#features16-27" class="text-white text-primary"><strong>Sobre</strong></a></h5>
+                <ul class="list mbr-fonts-style display-4">
+
+                    <li class="mbr-text item-wrap"><a href="projectivestetics.html" class="text-white text-primary" style="font-size: 1.1rem; background-color: rgb(12, 15, 10);">Estética Projetiva</a><br></li><li class="mbr-text item-wrap"><br></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><a href="index.html#image1-6" class="text-warning text-primary"><strong>Trabalhos</strong></a></h5>
+                <ul class="list mbr-fonts-style display-4">
+                    <!-- <li class="mbr-text item-wrap"><a href="iowlt.html" class="text-white text-primary">Veneza Serenata</a></li> -->
+                
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                    <strong>Brief</strong></h5>
+                <p class="mbr-text mbr-fonts-style mb-4 display-4">
+                    Meu nome é Paloma Sette. Sou entusiasta das <a href="projectivestetics.html" class="text-white text-primary">duas retas paralelas</a> que tendem a se encontrar no infinito.</p>
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-7">
+                    <strong>Social</strong>
+                </h5>
+                <div class="social-row display-7">
+                    <div class="soc-item">
+                        <a href="https://www.instagram.com/palomalsett/" target="_blank">
+                            <span class="mbr-iconfont socicon-instagram socicon"></span>
+                        </a>
+                    </div>
+                    <!-- <div class="soc-item">
+                        <a href="https://www.facebook.com/palomalsett" target="_blank">
+                            <span class="mbr-iconfont socicon-linkedin socicon"></span>
+                        </a>
+                    </div> -->
+                    <div class="soc-item">
+                        <a href="mailto:pfls.sette@gmail.com">
+                            <span class="mbr-iconfont socicon-mail socicon"></span>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section style="background-color: #0b0909; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;">
+   <a href="https://mobirise.site/w" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a>
+   <p style="flex: 0 0 auto; margin:0; padding-right:1rem;"> <a href="https://mobirise.site/a" style="color:#aaa;"></a></p>
+</section>
+<script src="assets/web/assets/jquery/jquery.min.js"></script>  
+<script src="assets/popper/popper.min.js"></script>  
+<script src="assets/tether/tether.min.js"></script>  
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>  
+<script src="assets/smoothscroll/smooth-scroll.js"></script>  
+<script src="assets/dropdown/js/nav-dropdown.js"></script>  
+<script src="assets/dropdown/js/navbar-dropdown.js"></script>  
+<script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  
+<script src="assets/parallax/jarallax.min.js"></script>  
+<script src="assets/sociallikes/social-likes.js"></script>  
+<script src="assets/theme/js/script.js"></script>
+
+<script>
+// Elegant Artwork Carousel JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('artworkCarouselTrack');
+    const dots = document.querySelectorAll('.artwork-dots .dot');
+    const slides = document.querySelectorAll('.artwork-slide');
+    const modal = document.getElementById('artworkModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalLegend = document.getElementById('modalLegend');
+    const modalYear = document.getElementById('modalYear');
+    const modalClose = document.getElementById('modalClose');
+    const artworkItems = document.querySelectorAll('.artwork-item');
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    
+    function showSlide(slideIndex) {
+        // Hide all slides
+        slides.forEach(slide => {
+            slide.classList.remove('active');
+        });
+        
+        // Show current slide
+        if (slides[slideIndex]) {
+            slides[slideIndex].classList.add('active');
+        }
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === slideIndex);
+        });
+        
+        currentSlide = slideIndex;
+    }
+    
+    // Initialize first slide
+    showSlide(0);
+    
+    // Dot navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+        });
+    });
+    
+    // Artwork item click - open modal
+    artworkItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const imageSrc = item.getAttribute('data-image');
+            const title = item.getAttribute('data-title');
+            const year = item.getAttribute('data-year');
+            
+            modalImage.src = imageSrc;
+            modalImage.alt = title;
+            modalLegend.textContent = title;
+            modalYear.textContent = year;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+    });
+    
+    // Close modal
+    modalClose.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    });
+    
+    // Close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Touch/swipe support for carousel
+    let startX = 0;
+    let endX = 0;
+    
+    if (track) {
+        track.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+        
+        track.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+    }
+    
+    function handleSwipe() {
+        const threshold = 50; // Minimum swipe distance
+        const diff = startX - endX;
+        
+        if (Math.abs(diff) > threshold) {
+            if (diff > 0) {
+                // Swipe left - next slide
+                const next = (currentSlide + 1) % totalSlides;
+                showSlide(next);
+            } else {
+                // Swipe right - previous slide
+                const prev = (currentSlide - 1 + totalSlides) % totalSlides;
+                showSlide(prev);
+            }
+        }
+    }
+    
+    // Second Carousel - Drawings
+    const drawingsTrack = document.getElementById('drawingsCarouselTrack');
+    const drawingsDots = document.querySelectorAll('.drawings-dots .dot');
+    const drawingSlides = document.querySelectorAll('.drawing-slide');
+    
+    let currentDrawingSlide = 0;
+    const totalDrawingSlides = drawingSlides.length;
+    
+    function showDrawingSlide(slideIndex) {
+        // Hide all slides
+        drawingSlides.forEach(slide => {
+            slide.classList.remove('active');
+        });
+        
+        // Show current slide
+        if (drawingSlides[slideIndex]) {
+            drawingSlides[slideIndex].classList.add('active');
+        }
+        
+        // Update dots
+        drawingsDots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === slideIndex);
+        });
+        
+        currentDrawingSlide = slideIndex;
+    }
+    
+    // Initialize first slide
+    showDrawingSlide(0);
+    
+    // Dot navigation
+    drawingsDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showDrawingSlide(index);
+        });
+    });
+    
+    // Touch/swipe support for drawings carousel
+    if (drawingsTrack) {
+        drawingsTrack.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+        
+        drawingsTrack.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            handleDrawingsSwipe();
+        });
+    }
+    
+    function handleDrawingsSwipe() {
+        const threshold = 50; // Minimum swipe distance
+        const diff = startX - endX;
+        
+        if (Math.abs(diff) > threshold) {
+            if (diff > 0) {
+                // Swipe left - next slide
+                const next = (currentDrawingSlide + 1) % totalDrawingSlides;
+                showDrawingSlide(next);
+            } else {
+                // Swipe right - previous slide
+                const prev = (currentDrawingSlide - 1 + totalDrawingSlides) % totalDrawingSlides;
+                showDrawingSlide(prev);
+            }
+        }
+    }
+});
+</script>
+
+</body>
+</html>
