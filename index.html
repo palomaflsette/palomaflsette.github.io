@@ -367,7 +367,7 @@
             -webkit-media-controls-fullscreen-button: none !important;
          }
          
-         /* Specific for carousel videos */
+         /* Specific for carousel videos - ULTRA AGGRESSIVE */
          .video-services video {
             pointer-events: none !important;
             -webkit-media-controls: none !important;
@@ -381,6 +381,18 @@
             -webkit-media-controls-volume-slider: none !important;
             -webkit-media-controls-mute-button: none !important;
             -webkit-media-controls-fullscreen-button: none !important;
+            user-select: none !important;
+            -webkit-user-select: none !important;
+            -moz-user-select: none !important;
+            -ms-user-select: none !important;
+         }
+         
+         /* Hide any remaining controls with absolute positioning */
+         .video-services video::-webkit-media-controls-overlay-play-button {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
          }
          
          video::-webkit-media-controls {
@@ -1342,14 +1354,15 @@
          
           });
          
-         // Force video autoplay and remove controls
+         // Force video autoplay and remove controls - AGGRESSIVE APPROACH
          document.addEventListener('DOMContentLoaded', function() {
            // Force all videos to autoplay and remove controls
            const videos = document.querySelectorAll('video');
            videos.forEach(video => {
-             // Remove all attributes that might cause controls
+             // Remove ALL possible control attributes
              video.removeAttribute('controls');
              video.removeAttribute('preload');
+             video.removeAttribute('poster');
              
              // Set autoplay attributes
              video.setAttribute('autoplay', '');
@@ -1357,6 +1370,7 @@
              video.setAttribute('muted', '');
              video.setAttribute('playsinline', '');
              video.setAttribute('webkit-playsinline', '');
+             video.setAttribute('x-webkit-airplay', 'allow');
              
              // Force properties
              video.autoplay = true;
@@ -1364,27 +1378,60 @@
              video.muted = true;
              video.playsInline = true;
              video.controls = false;
+             video.preload = 'none';
              
-             // Remove all video controls with CSS
+             // AGGRESSIVE CSS removal
              video.style.pointerEvents = 'none';
              video.style.outline = 'none';
              video.style.border = 'none';
+             video.style.userSelect = 'none';
+             video.style.webkitUserSelect = 'none';
+             video.style.mozUserSelect = 'none';
+             video.style.msUserSelect = 'none';
              
-             // Add CSS to completely hide controls
+             // Force hide ALL possible controls
              video.style.setProperty('-webkit-media-controls', 'none', 'important');
              video.style.setProperty('-webkit-media-controls-panel', 'none', 'important');
              video.style.setProperty('-webkit-media-controls-play-button', 'none', 'important');
+             video.style.setProperty('-webkit-media-controls-start-playback-button', 'none', 'important');
+             video.style.setProperty('-webkit-media-controls-overlay-play-button', 'none', 'important');
+             video.style.setProperty('-webkit-media-controls-timeline', 'none', 'important');
+             video.style.setProperty('-webkit-media-controls-current-time-display', 'none', 'important');
+             video.style.setProperty('-webkit-media-controls-time-remaining-display', 'none', 'important');
+             video.style.setProperty('-webkit-media-controls-volume-slider', 'none', 'important');
+             video.style.setProperty('-webkit-media-controls-mute-button', 'none', 'important');
+             video.style.setProperty('-webkit-media-controls-fullscreen-button', 'none', 'important');
              
-             // Force play
-             setTimeout(() => {
+             // Add event listeners to prevent any interaction
+             video.addEventListener('click', function(e) {
+               e.preventDefault();
+               e.stopPropagation();
+               return false;
+             });
+             
+             video.addEventListener('touchstart', function(e) {
+               e.preventDefault();
+               e.stopPropagation();
+               return false;
+             });
+             
+             video.addEventListener('touchend', function(e) {
+               e.preventDefault();
+               e.stopPropagation();
+               return false;
+             });
+             
+             // Force play with multiple attempts
+             const playVideo = () => {
                video.play().catch(e => {
                  console.log('Video autoplay failed:', e);
-                 // Try again after a short delay
-                 setTimeout(() => {
-                   video.play().catch(e2 => console.log('Second attempt failed:', e2));
-                 }, 1000);
+                 setTimeout(playVideo, 1000);
                });
-             }, 500);
+             };
+             
+             setTimeout(playVideo, 500);
+             setTimeout(playVideo, 2000);
+             setTimeout(playVideo, 5000);
            });
          });
          
