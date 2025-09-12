@@ -277,9 +277,28 @@
                object-fit: cover !important;
             }
             
+            /* Hide video controls and play buttons */
+            .w-background-video-atom video::-webkit-media-controls {
+               display: none !important;
+            }
+            
+            .w-background-video-atom video::-webkit-media-controls-panel {
+               display: none !important;
+            }
+            
+            .w-background-video-atom video::-webkit-media-controls-play-button {
+               display: none !important;
+            }
+            
+            .w-background-video-atom video::-webkit-media-controls-start-playback-button {
+               display: none !important;
+            }
+            
             /* Keep original navigation behavior but fix mobile display */
             .nav-link {
                transition: all 0.3s ease;
+               color: #1a1a1a !important;
+               font-weight: 600;
             }
             
             .nav-link-bg {
@@ -972,23 +991,23 @@
                    </h5>
                    <div class="social-row display-7">
                       <div class="soc-item">
-                         <a href="https://www.instagram.com/palomalsett/" target="_blank">
-                         <i class="fab fa-instagram" style="font-size: 24px; color: white;"></i>
+                         <a href="https://www.instagram.com/palomalsett/" target="_blank" style="display: inline-block; width: 40px; height: 40px; background: white; border-radius: 50%; text-align: center; line-height: 40px; text-decoration: none;">
+                         <i class="fab fa-instagram" style="font-size: 20px; color: #E4405F;"></i>
                          </a>
                       </div>
                       <div class="soc-item">
-                         <a href="https://www.github.com/palomaflsette/" target="_blank">
-                         <i class="fab fa-github" style="font-size: 24px; color: white;"></i>
+                         <a href="https://www.github.com/palomaflsette/" target="_blank" style="display: inline-block; width: 40px; height: 40px; background: white; border-radius: 50%; text-align: center; line-height: 40px; text-decoration: none;">
+                         <i class="fab fa-github" style="font-size: 20px; color: #333;"></i>
                          </a>
                       </div>
                       <div class="soc-item">
-                         <a href="https://www.linkedin.com/in/paloma-sett/" target="_blank">
-                         <i class="fab fa-linkedin" style="font-size: 24px; color: white;"></i>
+                         <a href="https://www.linkedin.com/in/paloma-sett/" target="_blank" style="display: inline-block; width: 40px; height: 40px; background: white; border-radius: 50%; text-align: center; line-height: 40px; text-decoration: none;">
+                         <i class="fab fa-linkedin" style="font-size: 20px; color: #0077B5;"></i>
                          </a>
                       </div>
                       <div class="soc-item">
-                         <a href="mailto:pfls.sette@gmail.com">
-                         <i class="fas fa-envelope" style="font-size: 24px; color: white;"></i>
+                         <a href="mailto:pfls.sette@gmail.com" style="display: inline-block; width: 40px; height: 40px; background: white; border-radius: 50%; text-align: center; line-height: 40px; text-decoration: none;">
+                         <i class="fas fa-envelope" style="font-size: 20px; color: #EA4335;"></i>
                          </a>
                       </div>
                    </div>
