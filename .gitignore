@@ -1,0 +1,3 @@
+# Ignore video files (too large for GitHub)
+assets/videos/*.mp4
+assets/videos/*.mov
