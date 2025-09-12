@@ -10,7 +10,7 @@
       <meta content="Built on my own." property="twitter:description"/>
       <meta property="og:type" content="website"/>
       <meta content="summary_large_image" name="twitter:card"/>
-      <meta content="width=device-width, initial-scale=1" name="viewport"/>
+      <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
       <meta content="Webflow" name="generator"/>
       <link href="assets/main/webflow.css" rel="stylesheet" type="text/css"/>
       <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -228,6 +228,29 @@
                font-size: 20px;
             }
             
+         }
+         
+         /* Mobile fixes */
+         @media (max-width: 768px) {
+            body {
+               overflow-x: hidden;
+            }
+            
+            .video-hero video {
+               object-fit: cover;
+               width: 100%;
+               height: 100%;
+            }
+            
+            .w-background-video {
+               overflow: hidden;
+            }
+            
+            /* Fix white space on mobile */
+            .section {
+               width: 100%;
+               overflow-x: hidden;
+            }
          }
          
          /* Elegant separators for other sections */
