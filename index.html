@@ -2237,7 +2237,7 @@
              video.muted = true;
              video.playsInline = true;
              video.controls = false;
-             video.preload = 'none';
+             video.preload = 'auto';
              
              // AGGRESSIVE CSS removal
              video.style.pointerEvents = 'none';
@@ -2288,11 +2288,82 @@
                });
              };
              
+             // Try immediately
+             playVideo();
+             
+             // Multiple attempts
+             setTimeout(playVideo, 100);
              setTimeout(playVideo, 500);
+             setTimeout(playVideo, 1000);
              setTimeout(playVideo, 2000);
              setTimeout(playVideo, 5000);
+             
+             // Force on any user interaction
+             document.addEventListener('click', playVideo, { once: true });
+             document.addEventListener('touchstart', playVideo, { once: true });
+             document.addEventListener('scroll', playVideo, { once: true });
            });
          });
+         
+         // Additional aggressive autoplay on window load
+         window.addEventListener('load', function() {
+           setTimeout(() => {
+             document.querySelectorAll('video').forEach(video => {
+               video.muted = true;
+               video.play().catch(e => console.log('Window load play failed:', e));
+             });
+           }, 1000);
+         });
+         
+         // MOBILE SPECIFIC FIXES - Mais agressivo para celular
+         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+           // Force play on any touch/scroll event
+           let hasPlayed = false;
+           const forceMobilePlay = () => {
+             if (!hasPlayed) {
+               document.querySelectorAll('video').forEach(video => {
+                 video.muted = true;
+                 video.play().then(() => {
+                   hasPlayed = true;
+                   console.log('Mobile video started playing');
+                 }).catch(e => console.log('Mobile play failed:', e));
+               });
+             }
+           };
+           
+           // Multiple mobile events
+           document.addEventListener('touchstart', forceMobilePlay, { passive: true });
+           document.addEventListener('touchend', forceMobilePlay, { passive: true });
+           document.addEventListener('scroll', forceMobilePlay, { passive: true });
+           document.addEventListener('orientationchange', forceMobilePlay);
+           
+           // Force after a delay
+           setTimeout(forceMobilePlay, 2000);
+           setTimeout(forceMobilePlay, 5000);
+         }
+         
+         // iOS Safari específico - o mais teimoso
+         if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+           // iOS precisa de interação do usuário para autoplay
+           const iosPlay = () => {
+             document.querySelectorAll('video').forEach(video => {
+               video.muted = true;
+               video.setAttribute('playsinline', '');
+               video.setAttribute('webkit-playsinline', '');
+               video.play().catch(e => console.log('iOS play failed:', e));
+             });
+           };
+           
+           // Tenta em qualquer interação
+           document.addEventListener('touchstart', iosPlay, { once: true });
+           document.addEventListener('click', iosPlay, { once: true });
+           document.addEventListener('scroll', iosPlay, { once: true });
+           
+           // Força após carregar
+           window.addEventListener('load', () => {
+             setTimeout(iosPlay, 1000);
+           });
+         }
          
          // Thoughts Carousel JavaScript
          document.addEventListener('DOMContentLoaded', function() {
