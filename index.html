@@ -988,6 +988,387 @@
             }
          }
          
+         /* SISTEMA RESPONSIVO INSPIRADO NA PÁGINA DE ARTE */
+         
+         /* Texto justificado global - igual à página de arte */
+         .mbr-text.mbr-fonts-style.display-4 {
+            text-align: justify !important;
+            text-justify: inter-word !important;
+            line-height: 1.8 !important;
+            font-size: 1.1rem !important;
+            color: #333 !important;
+         }
+         
+         /* Mobile: textos mais compactos */
+         @media (max-width: 767px) {
+            .mbr-text.mbr-fonts-style.display-4 {
+               line-height: 1.4 !important;
+               font-size: 1rem !important;
+               margin-bottom: 0.5rem !important;
+            }
+            
+            /* Reduzir espaçamento entre parágrafos */
+            .mbr-text.mbr-fonts-style.display-4 br {
+               line-height: 0.8 !important;
+            }
+            
+            /* Títulos mais compactos também */
+            .card-title.mbr-fonts-style.display-2 {
+               line-height: 1.2 !important;
+               margin-bottom: 1rem !important;
+            }
+         }
+         
+         /* Content wrapper responsivo - seções mais gordinhas e alinhadas */
+         .content-wrapper {
+            background: #ffffff;
+            margin: 0 auto !important;
+            padding: 3rem 2rem !important;
+            max-width: 1200px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+         }
+         
+         @media (max-width: 767px) {
+            .content-wrapper {
+               padding: 3rem 1rem !important;
+               margin: 0 auto !important;
+               max-width: 100% !important;
+               width: calc(100% - 1rem) !important;
+               margin-left: 0.5rem !important;
+               margin-right: 0.5rem !important;
+            }
+            
+            .content-wrapper .row {
+               align-items: center !important;
+               justify-content: center !important;
+               margin: 0 !important;
+               width: 100% !important;
+            }
+            
+            .content-wrapper .image-wrapper {
+               margin-bottom: -2.7rem !important;
+               text-align: center !important;
+               padding: 0 0.5rem !important;
+            }
+            
+            .content-wrapper .image-wrapper img {
+               max-width: 98% !important;
+               height: auto !important;
+               margin: 0 auto !important;
+               display: block !important;
+            }
+            
+            .mbr-text.mbr-fonts-style.display-4 {
+               font-size: 1rem !important;
+               line-height: 1.4 !important;
+               text-align: justify !important;
+               margin: 0 !important;
+               padding: 0 0.5rem !important;
+            }
+         }
+         
+         @media (min-width: 768px) and (max-width: 991px) {
+            .content-wrapper {
+               padding: 4rem 3rem !important;
+               margin: 0 auto !important;
+               max-width: 1000px !important;
+            }
+            
+            .content-wrapper .row {
+               align-items: center !important;
+               justify-content: center !important;
+               margin: 0 !important;
+            }
+            
+            .content-wrapper .image-wrapper {
+               text-align: center !important;
+               padding: 0 1rem !important;
+            }
+            
+            .mbr-text.mbr-fonts-style.display-4 {
+               font-size: 1.05rem !important;
+               line-height: 1.75 !important;
+               text-align: justify !important;
+               padding: 0 1.5rem !important;
+               margin: 0 !important;
+            }
+         }
+         
+         @media (min-width: 992px) {
+            .content-wrapper {
+               padding: 5rem 4rem !important;
+               margin: 0 auto !important;
+               max-width: 1200px !important;
+            }
+            
+            .content-wrapper .row {
+               align-items: center !important;
+               justify-content: center !important;
+               margin: 0 !important;
+            }
+            
+            .content-wrapper .text-wrapper,
+            .content-wrapper .text-wrapper-last {
+               padding: 0 2rem !important;
+            }
+            
+            .content-wrapper .image-wrapper {
+               text-align: center !important;
+               padding: 0 1rem !important;
+            }
+            
+            .mbr-text.mbr-fonts-style.display-4 {
+               font-size: 1.15rem !important;
+               line-height: 1.8 !important;
+               text-align: justify !important;
+               margin: 0 !important;
+            }
+         }
+         
+         /* Títulos consistentes */
+         .card-title.mbr-fonts-style.display-2 {
+            font-weight: bold !important;
+            margin-bottom: 1.5rem !important;
+            line-height: 1.3 !important;
+         }
+         
+         /* Links de email bem formatados */
+         .mbr-text a {
+            word-break: break-all !important;
+            color: #007bff !important;
+            text-decoration: none !important;
+         }
+         
+         .mbr-text a:hover {
+            text-decoration: underline !important;
+         }
+         
+         /* Botões responsivos */
+         .mbr-section-btn .btn {
+            font-size: 1rem !important;
+            padding: 12px 24px !important;
+            margin-top: 1rem !important;
+         }
+         
+         /* Garantir alinhamento perfeito das imagens - SEMPRE dentro da área branca */
+         .image-wrapper {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+            overflow: hidden !important;
+         }
+         
+         .image-wrapper img {
+            max-width: 95% !important;
+            width: auto !important;
+            height: auto !important;
+            border-radius: 8px !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+            margin: 0 auto !important;
+            display: block !important;
+            object-fit: contain !important;
+         }
+         
+         /* Garantir que carousels também fiquem dentro da área */
+         #imageCarousel {
+            max-width: 95% !important;
+            margin: 0 auto !important;
+            margin-bottom: -1.5rem !important;
+         }
+         
+         /* Aproximar carousel do texto */
+         .custom-center-ahead-about-me .col-12.col-lg-5 {
+            margin-bottom: -2rem !important;
+         }
+         
+         #imageCarousel img {
+            max-width: 85% !important;
+            width: 85% !important;
+            height: auto !important;
+            margin: 0 auto !important;
+            display: block !important;
+            border-radius: 8px !important;
+         }
+         
+         /* Garantir que as imagens do carousel sejam grandes - sobrescrever webflow.css */
+         .carousel-item img {
+            width: 85% !important;
+            max-width: 85% !important;
+            height: auto !important;
+            margin: 0 auto !important;
+            display: block !important;
+         }
+         
+         /* Força específica para sobrescrever o webflow.css que limita a 60% */
+         #imageCarousel .carousel-item img {
+            width: 85% !important;
+            max-width: 85% !important;
+         }
+         
+         @media (max-width: 767px) {
+            #imageCarousel .carousel-item img {
+               width: 98% !important;
+               max-width: 98% !important;
+            }
+            
+            #imageCarousel {
+               margin-bottom: -0.1rem !important;
+            }
+            
+            .custom-center-ahead-about-me .col-12.col-lg-5 {
+               margin-bottom: -1.5rem !important;
+            }
+         }
+         
+         /* Estilos para legendas das imagens - discretas e elegantes */
+         .carousel-caption-custom {
+            background: none !important;
+            border: none !important;
+            padding: 2px 0 !important;
+            margin-top: 3px !important;
+            text-align: center !important;
+         }
+         
+         .image-caption {
+            background: none !important;
+            border: none !important;
+            padding: 2px 0 !important;
+            margin-top: 3px !important;
+            text-align: center !important;
+         }
+         
+         .caption-text {
+            color: #666666 !important;
+            font-size: 0.75rem !important;
+            line-height: 1.2 !important;
+            margin: 0 !important;
+            font-weight: 400 !important;
+            font-style: italic !important;
+            opacity: 0.8 !important;
+         }
+         
+         @media (max-width: 767px) {
+            .caption-text {
+               font-size: 0.7rem !important;
+               line-height: 1.1 !important;
+            }
+            
+            .carousel-caption-custom,
+            .image-caption {
+               padding: 1px 0 !important;
+               margin-top: 2px !important;
+            }
+         }
+         
+         /* Centralizar todos os containers principais */
+         .container {
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+         }
+         
+         /* Garantir que as rows fiquem centralizadas */
+         .row.align-items-center {
+            align-items: center !important;
+            justify-content: center !important;
+         }
+         
+         /* Text wrappers bem organizados e alinhados */
+         .text-wrapper,
+         .text-wrapper-last {
+            padding: 1.5rem !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+         }
+         
+         @media (max-width: 767px) {
+            .text-wrapper,
+            .text-wrapper-last {
+               padding: 1rem 0.5rem !important;
+               width: 100% !important;
+               text-align: left !important;
+            }
+            
+            /* Garantir que imagens fiquem maiores em mobile */
+            .image-wrapper img {
+               max-width: 95% !important;
+            }
+            
+            #imageCarousel {
+               max-width: 95% !important;
+            }
+         }
+         
+         @media (min-width: 768px) {
+            .text-wrapper,
+            .text-wrapper-last {
+               padding: 2rem !important;
+            }
+         }
+         
+         /* Garantir alinhamento consistente de todos os containers */
+         .container {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+         }
+         
+         .custom-center,
+         .custom-center-ahead-about-me,
+         .custom-center-ahead-about-me-last {
+            margin: 0 auto !important;
+            max-width: 1200px !important;
+            width: 100% !important;
+         }
+         
+         .custom-center-ahead-about-me-last .image-wrapper img {
+            width: auto !important;
+            max-width: 95% !important;
+            min-width: 400px !important;
+            height: auto !important;
+            margin: 0 auto !important;
+            display: block !important;
+         }
+         
+         div.custom-center-ahead-about-me-last div.image-wrapper img {
+            max-width: 95% !important;
+            min-width: 400px !important;
+         }
+         
+         @media (max-width: 767px) {
+            .custom-center-ahead-about-me-last .image-wrapper img {
+               min-width: auto !important;
+               max-width: 98% !important;
+            }
+            
+            div.custom-center-ahead-about-me-last div.image-wrapper img {
+               min-width: auto !important;
+               max-width: 98% !important;
+            }
+         }
+         
+         /* Garantir que a legenda da última imagem fique bem posicionada */
+         .custom-center-ahead-about-me-last .image-wrapper {
+            width: 100% !important;
+            max-width: 100% !important;
+            overflow: visible !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+         }
+         
+         .custom-center-ahead-about-me-last .image-caption {
+            width: 100% !important;
+            text-align: center !important;
+            display: block !important;
+            clear: both !important;
+         }
+         
          /* Navigation styles for thoughts section - handled by existing navigation system */
       </style>
       
@@ -1092,11 +1473,11 @@
                                        <h6 class="card-title mbr-fonts-style display-2">
                                           <strong>About me</strong>
                                        </h6>
-                                       <p class="mbr-text mbr-fonts-style mb-4 display-4">My name is <strong>Paloma Sette</strong>, I'm a Control and Automation Engineering graduate at PUC-Rio and currently AI/ML researcher and developer at Ford Motors Company.
+                                       <p class="mbr-text mbr-fonts-style mb-4 display-4">My name is <strong>Paloma Sette</strong>, I'm a Control and Automation Engineering student at PUC-Rio and currently AI/ML researcher and developer at Ford Motors Company.
                                           <br>
                                           <br>Driven by a passion for research and development (R&D), my focus is on creating solutions that integrate <strong>Computational intelligence</strong>, <strong>Machine Learning</strong>, and <strong>Automation systems</strong> to solve complex problems.
                                           <br>
-                                          <br><strong>E-mails:</strong> <a href="mailto:pfls.sette@gmail.com" class="text-secondary"><strong>pfls.sette@gmail.com</strong></a> <strong>|</strong> <a href="mailto:paloma.sette@puc-rio.br" class="text-secondary"><strong>paloma.sette@aluno.puc-rio.br</strong></a>
+                                          <br><strong>E-mail:</strong>  <a href="mailto:paloma.sette@puc-rio.br" class="text-secondary"><strong>paloma.sette@aluno.puc-rio.br</strong></a>
                                           <br>See more about my technological explorations ahead!
                                        </p>
                                        <div class="mbr-section-btn mt-3">
@@ -1130,12 +1511,16 @@
                                         <!-- Slides -->
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
-                                                <img src="assets/images/paloma-area-tecnica.jpg" alt="Paloma L Sette - Imagem 1" class="d-block" style="width: 72% !important; height: auto !important;">
+                                                <img src="assets/images/paloma-area-tecnica_.jpg" alt="Paloma L Sette - Imagem 1" class="d-block">
                                             </div>
                                             <div class="carousel-item">
-                                                <img src="assets/images/fire-training.jpg" alt="Paloma L Sette - Imagem 2" class="d-block" style="width: 75% !important; height: auto !important;">
+                                                <img src="assets/images/fire-training.jpg" alt="Paloma L Sette - Imagem 2" class="d-block">
+                                            </div>
                                             </div>
                                             
+                                        <!-- Legenda dinâmica -->
+                                        <div class="carousel-caption-custom" id="carouselCaption">
+                                            <p class="caption-text"> Technical area at Roche Manufacturer in Rio de Janeiro - Development and implementation of systems</p>
                                         </div>
                     
                                     </div>
@@ -1178,7 +1563,10 @@
                                    </div>
                                    <div class="col-12 col-lg-5">
                                     <div class="image-wrapper">
-                                       <img src="assets/images/engineering-department.jpg" alt="Paloma L Sette" style="width:200% !important; height: auto !important;">
+                                       <img src="assets/images/engineering-department.jpg" alt="Paloma L Sette">
+                                       <div class="image-caption">
+                                          <p class="caption-text">Quality Control and BMF Event - Exhibition of Technical Projects</p>
+                                       </div>
                                     </div>
                                  </div>
                                    
@@ -1198,7 +1586,6 @@
          <section id="skills" color="bg" class="section skills">
             <div class="w-layout-blockcontainer main-container w-container">
                <div class="headline-skills">
-                  <div class="label">Other Projects</div>
                   <div class="heading-skills">
                      <div class="heading-large">Other Projects</div>
                   </div>
@@ -1594,7 +1981,7 @@
                       <strong>Brief</strong>
                    </h5>
                    <p class="mbr-text mbr-fonts-style mb-4 display-4">
-                      My name is <a href="longbio.html" class="text-white text-primary">Paloma Sette</a>, I'm a PhD student at Harvard, and here I share things about myself.
+                      My name is <a href="longbio.html" class="text-white text-primary">Paloma Sette</a>, I'm a Control and Automation Engineering graduate at PUC-Rio and  AI/ML researcher and developer at Ford Motors Company.
                    </p>
                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-7">
                       <strong>Social</strong>
@@ -1975,6 +2362,27 @@
                }
              }
            });
+         });
+         
+         // Script para legendas dinâmicas do carousel
+         document.addEventListener('DOMContentLoaded', function() {
+            const imageCarousel = document.getElementById('imageCarousel');
+            const carouselCaption = document.getElementById('carouselCaption');
+            
+            const captions = [
+               'Technical area at Roche Manufacturer in Rio de Janeiro - Development and implementation of systems',
+               'Fire Brigade Training - Safety NR23 Training'
+            ];
+            
+            if (imageCarousel && carouselCaption) {
+               imageCarousel.addEventListener('slide.bs.carousel', function (event) {
+                  const slideIndex = event.to;
+                  const captionText = carouselCaption.querySelector('.caption-text');
+                  if (captionText && captions[slideIndex]) {
+                     captionText.textContent = captions[slideIndex];
+                  }
+               });
+            }
          });
          
       </script>
