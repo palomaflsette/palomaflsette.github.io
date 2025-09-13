@@ -93,11 +93,16 @@
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
+            overflow: hidden !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
          }
          
          .thoughts-carousel-wrapper {
-            overflow: hidden;
+            overflow: hidden !important;
             border-radius: 20px;
+            width: 100% !important;
+            max-width: 100% !important;
          }
          
          .thoughts-carousel-track {
@@ -107,12 +112,14 @@
          
          .thoughts-card {
             min-width: 100%;
+            max-width: 100%;
             background: white;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             overflow: hidden;
-            margin: 0 20px;
+            margin: 0;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-sizing: border-box;
          }
          
          .thoughts-card:hover {
@@ -139,6 +146,8 @@
          
          .thoughts-card-content {
             padding: 30px;
+            overflow: hidden;
+            word-wrap: break-word;
          }
          
          .thoughts-card-title {
@@ -147,6 +156,9 @@
             color: #2A2119;
             margin-bottom: 10px;
             line-height: 1.3;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
          }
          
          .thoughts-card-date {
@@ -161,6 +173,16 @@
             color: #495057;
             line-height: 1.6;
             margin-bottom: 25px;
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+            word-break: break-all !important;
+            hyphens: auto !important;
+            text-align: justify;
+            max-width: 100% !important;
+            width: 100% !important;
+            overflow: hidden !important;
+            display: block !important;
+            white-space: normal !important;
          }
          
          .thoughts-read-more {
@@ -211,21 +233,72 @@
             background: #6c757d;
          }
          
+         /* CORREÇÃO ESPECÍFICA PARA OVERFLOW DE TEXTO */
+         .thoughts-card {
+            width: 100% !important;
+            max-width: 100% !important;
+            overflow: hidden !important;
+         }
+         
+         .thoughts-card-content {
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+            overflow: hidden !important;
+         }
+         
+         .thoughts-card-description {
+            width: 100% !important;
+            max-width: 100% !important;
+            padding-right: 0 !important;
+            display: block !important;
+            white-space: normal !important;
+            box-sizing: border-box !important;
+         }
+         
+         /* FORÇA TODOS OS ELEMENTOS DO CARD A RESPEITAREM LIMITES */
+         .thoughts-card *,
+         .thoughts-card *:before,
+         .thoughts-card *:after {
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+         }
+         
          @media (max-width: 768px) {
             .headline-thoughts .heading-large {
                font-size: 32px;
             }
             
             .thoughts-card {
-               margin: 0 10px;
+               margin: 0;
+               width: 100% !important;
+               max-width: 100% !important;
             }
             
             .thoughts-card-content {
                padding: 20px;
+               width: 100% !important;
+               max-width: 100% !important;
+               box-sizing: border-box !important;
             }
             
             .thoughts-card-title {
                font-size: 20px;
+               width: 100% !important;
+               max-width: 100% !important;
+               word-wrap: break-word !important;
+            }
+            
+            .thoughts-card-description {
+               font-size: 14px !important;
+               width: 100% !important;
+               max-width: 100% !important;
+               word-wrap: break-word !important;
+               overflow-wrap: break-word !important;
+               word-break: break-word !important;
+               line-height: 1.4 !important;
             }
             
          }
@@ -550,14 +623,372 @@
             position: relative;
          }
          
-         /* Navigation styles for thoughts section */
-         .nav-link.thoughts-nav {
-            /* Add any specific styles for thoughts nav link if needed */
+         /* ÁREA DE TEXTO PROFISSIONAL - DESKTOP */
+         @media (min-width: 1025px) {
+            .panel-inner {
+               padding: 36px 32px 24px 32px !important;
+               max-width: 420px !important;
+               background: rgba(139, 123, 107, 0.75) !important; /* Mais transparente para ver o vídeo */
+               border-radius: 8px !important;
+               backdrop-filter: blur(1px) !important;
+               box-shadow: inset 0 2px 4px rgba(0,0,0,0.15) !important;
+            }
+            
+            .text-scroll-right {
+               font-size: 2.3rem !important; /* Ligeiramente maior */
+               font-weight: 700 !important; /* Mais forte */
+               margin-bottom: 24px !important;
+               line-height: 1.1 !important;
+               color: #ffffff !important; /* Branco puro para mais contraste */
+               letter-spacing: -0.5px !important;
+               text-shadow: 2px 2px 4px rgba(0,0,0,0.7), 0 0 8px rgba(0,0,0,0.3) !important; /* Sombra mais forte */
+            }
+            
+            .label {
+               font-size: 0.92rem !important; /* Ligeiramente maior */
+               line-height: 1.6 !important;
+               color: #ffffff !important; /* Branco para melhor contraste */
+               font-weight: 500 !important; /* Mais forte */
+            }
+            
+            .label .text {
+               margin-bottom: 20px !important;
+               padding: 12px !important; /* Padding interno para o fundo */
+               background: rgba(0,0,0,0.4) !important; /* Fundo escuro só na área do texto */
+               border-radius: 6px !important;
+               border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+            }
+            
+            .label .text p {
+               margin-bottom: 14px !important;
+               font-size: 0.9rem !important; /* Ligeiramente maior */
+               line-height: 1.5 !important;
+               color: #f8f8f8 !important; /* Branco quase puro */
+               text-align: justify !important;
+               hyphens: auto !important;
+               text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important; /* Sombra para nitidez */
+            }
+            
+            /* Links organizados e estilizados */
+            .label a {
+               font-size: 0.84rem !important; /* Ligeiramente maior */
+               font-weight: 600 !important; /* Mais forte */
+               color: #87ceeb !important; /* Azul mais claro e vibrante */
+               text-decoration: none !important;
+               margin: 4px 8px 4px 0 !important;
+               padding: 4px 8px !important; /* Padding maior */
+               display: inline-block !important;
+               border-radius: 4px !important;
+               background: rgba(0,0,0,0.3) !important; /* Fundo escuro para contraste */
+               transition: all 0.2s ease !important;
+               border-left: 2px solid #87ceeb !important;
+               text-shadow: 1px 1px 2px rgba(0,0,0,0.6) !important; /* Sombra nos links */
+            }
+            
+            .label a:hover {
+               color: #ffffff !important;
+               background: rgba(135, 206, 235, 0.3) !important;
+               border-left-color: #ffffff !important;
+               transform: translateX(2px) !important;
+               text-shadow: 1px 1px 3px rgba(0,0,0,0.8) !important;
+            }
+            
+            /* Separador visual entre texto e links */
+            .label .text + * {
+               margin-top: 8px !important;
+            }
          }
          
-         .nav-link-bg.thoughts-nav {
-            /* This will be handled by the existing navigation system */
+         /* ÁREA DE TEXTO PROFISSIONAL - TABLETS */
+         @media (min-width: 769px) and (max-width: 1024px) {
+            .panel-inner {
+               padding: 30px 26px 20px 26px !important;
+               max-width: 370px !important;
+               background: rgba(139, 123, 107, 0.7) !important; /* Mais transparente */
+               border-radius: 6px !important;
+               backdrop-filter: blur(0.5px) !important;
+               box-shadow: inset 0 1px 3px rgba(0,0,0,0.15) !important;
+            }
+            
+            .text-scroll-right {
+               font-size: 2rem !important; /* Ligeiramente maior */
+               font-weight: 700 !important; /* Mais forte */
+               margin-bottom: 20px !important;
+               color: #ffffff !important; /* Branco puro */
+               letter-spacing: -0.3px !important;
+               text-shadow: 2px 2px 4px rgba(0,0,0,0.6), 0 0 6px rgba(0,0,0,0.3) !important;
+            }
+            
+            .label {
+               font-size: 0.87rem !important; /* Ligeiramente maior */
+               color: #ffffff !important; /* Branco puro */
+               line-height: 1.5 !important;
+               font-weight: 500 !important;
+            }
+            
+            .label .text {
+               margin-bottom: 16px !important;
+               padding: 10px !important; /* Padding para fundo */
+               background: rgba(0,0,0,0.35) !important; /* Fundo escuro na área do texto */
+               border-radius: 5px !important;
+               border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+            }
+            
+            .label .text p {
+               font-size: 0.82rem !important; /* Ligeiramente maior */
+               margin-bottom: 12px !important;
+               color: #f8f8f8 !important; /* Branco quase puro */
+               line-height: 1.4 !important;
+               text-align: justify !important;
+               text-shadow: 1px 1px 2px rgba(0,0,0,0.4) !important;
+            }
+            
+            .label a {
+               font-size: 0.77rem !important; /* Ligeiramente maior */
+               font-weight: 600 !important;
+               color: #87ceeb !important; /* Azul mais vibrante */
+               padding: 3px 6px !important;
+               margin: 3px 6px 3px 0 !important;
+               background: rgba(0,0,0,0.25) !important; /* Fundo escuro */
+               border-radius: 3px !important;
+               border-left: 2px solid #87ceeb !important;
+               text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important;
+            }
          }
+         
+         /* MELHORIAS GERAIS DE UX */
+         @media (min-width: 769px) {
+            /* Transição suave para hover */
+            .panel-inner {
+               transition: all 0.3s ease !important;
+            }
+            
+            /* Efeito sutil no hover do painel */
+            .panel:hover .panel-inner {
+               background: rgba(139, 123, 107, 0.98) !important;
+               box-shadow: inset 0 3px 6px rgba(0,0,0,0.15) !important;
+            }
+            
+            /* Melhor organização visual dos links */
+            .label {
+               position: relative !important;
+            }
+            
+            .label::before {
+               content: '' !important;
+               position: absolute !important;
+               top: -8px !important;
+               left: -8px !important;
+               right: -8px !important;
+               bottom: -8px !important;
+               background: rgba(255,255,255,0.02) !important;
+               border-radius: 6px !important;
+               z-index: -1 !important;
+            }
+         }
+         
+         /* OTIMIZAÇÕES PARA MOBILE - ÁREA DE PROJETOS */
+         @media (max-width: 768px) {
+            .panel-content {
+               display: flex !important;
+               flex-direction: column !important;
+               height: 100vh !important;
+               width: 100% !important;
+               background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+               border-radius: 0 !important;
+               overflow: hidden !important;
+            }
+            
+            .panel-inner {
+               flex: 0 0 auto !important; /* Não cresce, tamanho fixo */
+               padding: 25px 20px 20px 20px !important;
+               background: rgba(139, 123, 107, 0.85) !important;
+               margin: 0 !important;
+               max-width: none !important;
+               width: 100% !important;
+               min-height: auto !important;
+               max-height: 50vh !important; /* Máximo 50% da altura da tela */
+               overflow-y: auto !important;
+               position: relative !important;
+               z-index: 2 !important;
+            }
+            
+            .text-scroll-right {
+               font-size: 1.8rem !important;
+               font-weight: 700 !important;
+               margin-bottom: 15px !important;
+               text-align: center !important;
+               color: #ffffff !important;
+               line-height: 1.1 !important;
+               text-shadow: 2px 2px 4px rgba(0,0,0,0.6) !important;
+            }
+            
+            .label {
+               font-size: 0.85rem !important;
+               line-height: 1.5 !important;
+               color: #ffffff !important;
+               font-weight: 500 !important;
+            }
+            
+            .label .text {
+               margin-bottom: 15px !important;
+               padding: 10px !important;
+               background: rgba(0,0,0,0.3) !important;
+               border-radius: 5px !important;
+               border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+            }
+            
+            .label .text p {
+               margin-bottom: 10px !important;
+               font-size: 0.8rem !important;
+               line-height: 1.4 !important;
+               color: #f5f5f5 !important;
+               text-align: left !important;
+               text-shadow: 1px 1px 2px rgba(0,0,0,0.4) !important;
+            }
+            
+            .label a {
+               font-size: 0.75rem !important;
+               font-weight: 600 !important;
+               color: #87ceeb !important;
+               text-decoration: none !important;
+               margin: 2px 4px 2px 0 !important;
+               padding: 3px 6px !important;
+               display: inline-block !important;
+               border-radius: 3px !important;
+               background: rgba(0,0,0,0.2) !important;
+               border-left: 2px solid #87ceeb !important;
+               text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important;
+               transition: all 0.2s ease !important;
+            }
+            
+            .label a:hover {
+               color: #ffffff !important;
+               background: rgba(135, 206, 235, 0.2) !important;
+               transform: translateX(1px) !important;
+            }
+            
+            /* Vídeo em formato paisagem - mostra conteúdo completo */
+            .absolute-video {
+               flex: 1 !important;
+               position: relative !important;
+               top: auto !important;
+               left: auto !important;
+               right: auto !important;
+               bottom: auto !important;
+               z-index: 1 !important;
+               opacity: 1 !important;
+               border-radius: 0 !important;
+               overflow: hidden !important;
+               min-height: 200px !important;
+               display: flex !important;
+               align-items: center !important;
+               justify-content: center !important;
+               background: #000 !important; /* Fundo preto para barras laterais */
+            }
+            
+            .absolute-video video,
+            .absolute-video iframe {
+               width: 100% !important;
+               height: auto !important; /* Altura automática para manter proporção */
+               max-height: 100% !important;
+               object-fit: contain !important; /* Contém todo o vídeo sem cortar */
+               border-radius: 0 !important;
+            }
+            
+            /* Para vídeos muito altos, limitar altura e centralizar */
+            .absolute-video video[style*="height"] {
+               height: auto !important;
+               max-width: 100% !important;
+            }
+         }
+         
+         /* RESPONSIVIDADE ESPECÍFICA PARA DIFERENTES TAMANHOS DE MOBILE */
+         
+         /* Smartphones pequenos (até 375px) - iPhone SE, etc */
+         @media (max-width: 375px) {
+            .panel-inner {
+               padding: 20px 15px 15px 15px !important;
+               max-height: 40vh !important; /* Menos espaço para área marrom, mais para vídeo */
+            }
+            
+            .text-scroll-right {
+               font-size: 1.6rem !important;
+               margin-bottom: 12px !important;
+            }
+            
+            .label {
+               font-size: 0.8rem !important;
+            }
+            
+            .label .text p {
+               font-size: 0.75rem !important;
+               margin-bottom: 8px !important;
+            }
+            
+            .label a {
+               font-size: 0.7rem !important;
+               padding: 2px 4px !important;
+            }
+            
+            /* Vídeo otimizado para telas pequenas */
+            .absolute-video {
+               min-height: 180px !important;
+            }
+         }
+         
+         /* Smartphones médios (376px - 414px) - iPhone 12, etc */
+         @media (min-width: 376px) and (max-width: 414px) {
+            .panel-inner {
+               padding: 22px 18px 18px 18px !important;
+               max-height: 42vh !important; /* Mais espaço para vídeo */
+            }
+            
+            .text-scroll-right {
+               font-size: 1.7rem !important;
+            }
+            
+            .label .text p {
+               font-size: 0.78rem !important;
+            }
+            
+            /* Vídeo otimizado para telas médias */
+            .absolute-video {
+               min-height: 200px !important;
+            }
+         }
+         
+         /* Smartphones grandes (415px - 768px) - iPhone Plus, Android grandes */
+         @media (min-width: 415px) and (max-width: 768px) {
+            .panel-inner {
+               padding: 28px 22px 22px 22px !important;
+               max-height: 45vh !important; /* Mais espaço para vídeo */
+            }
+            
+            .text-scroll-right {
+               font-size: 1.9rem !important;
+               margin-bottom: 18px !important;
+            }
+            
+            .label {
+               font-size: 0.9rem !important;
+            }
+            
+            .label .text p {
+               font-size: 0.82rem !important;
+            }
+            
+            .label a {
+               font-size: 0.77rem !important;
+            }
+            
+            /* Vídeo otimizado para telas grandes */
+            .absolute-video {
+               min-height: 250px !important;
+            }
+         }
+         
+         /* Navigation styles for thoughts section - handled by existing navigation system */
       </style>
       
    </head>
@@ -866,10 +1297,9 @@
                                  
                                  <div class="label" >
 
-                                    <div class="text"><p> GADemo is an open educational platform designed to provide an intuitive and interactive environment for learning and experimenting with Genetic Algorithms (GAs).
-
-                                       Created with accessibility and clarity in mind, the platform allows users to explore GA concepts through visual simulations and guided parameter manipulation — no prior coding experience required.
-                                       </p></div>
+                                    <div class="text"><p> 
+                                       InsurUP is a specialized search platform that automates critical data discovery for reinsurance underwriters. Built in 2020 using Scrapy + AI (BERT, spaCy, scikit-learn), it performs simultaneous mining of Latin American financial information sources. With intelligent filtering by time and location, it replaced manual searches with assertive analyses, transforming financial risk assessment in the reinsurance sector.
+                                    </p></div>
                                     <br>
                                     ● <a href="assets/docs/InsurUP-Project.pdf">
                                        <u>InsurUP Pitch Deck</u>
@@ -900,9 +1330,7 @@
                               <div class="panel-inner">
                                  <div class="text-scroll-right">MUSTEM</div>
                                  <div class="label">
-                                    <div class="text"><p> GADemo is an open educational platform designed to provide an intuitive and interactive environment for learning and experimenting with Genetic Algorithms (GAs).
-
-                                       Created with accessibility and clarity in mind, the platform allows users to explore GA concepts through visual simulations and guided parameter manipulation — no prior coding experience required.
+                                    <div class="text"><p> MUSTEM is a synesthetic musical experience system for deaf individuals that combines FFT audio analysis with AI refinement to generate visual and vibrotactile patterns. Built on Arduino Mega, it processes music through Fourier Transform and CNN analysis, creating mathematically-grounded mappings that allow deaf people to "see" and "feel" music through TFT display visuals and vibratory patterns based on physical equations and psychoacoustic principles.
                                        </p></div>
                                     ● <u>Article (producing)</u>
                                     </a>
@@ -936,9 +1364,8 @@
                               <div class="panel-inner" id="raisebot">
                                  <div class="text-scroll-right">Raise Bot</div>
                                  <div class="label" >
-                                    <div class="text"><p> GADemo is an open educational platform designed to provide an intuitive and interactive environment for learning and experimenting with Genetic Algorithms (GAs).
-
-                                       Created with accessibility and clarity in mind, the platform allows users to explore GA concepts through visual simulations and guided parameter manipulation — no prior coding experience required.
+                                    <div class="text"><p> 
+                                       Vision-Action Mapping system integrating OAK-D stereo camera with Pincher 4-DoF manipulator to translate 2D pixel selection into precise 3D robotic positioning. Implemented complete pipeline using coordinate transformations and inverse kinematics. This project sparked particular interest as it originated from envisioning an acoustic inspection system, with future expansion planned for piezoelectric sensor integration to analyze surface acoustic signatures for non-destructive testing.
                                        </p></div>
                                     ● <a href="assets/docs/Projeto_Robotica-Industrial.pdf">
                                        <u>Final Report</u>
@@ -968,9 +1395,7 @@
                               <div class="panel-inner" id="fincontrol">
                                  <div class="text-scroll-right">FinControl</div>
                                  <div class="label" >
-                                    <div class="text"><p> GADemo is an open educational platform designed to provide an intuitive and interactive environment for learning and experimenting with Genetic Algorithms (GAs).
-
-                                       Created with accessibility and clarity in mind, the platform allows users to explore GA concepts through visual simulations and guided parameter manipulation — no prior coding experience required.
+                                    <div class="text"><p> FinControl is a financial control tool developed for company clients that earned recognition as the most innovative project in the "Estagiário que Ativa" program, securing 2nd place and Outstanding Intern award. The application eliminates the need for external financial tools by providing integrated asset management directly within the company ecosystem. Built with data collection and ML capabilities, it generates personalized insights and tips while enabling consensual data mining for AI-driven product development. 
                                        </p></div>
                                     ● <a href="assets/docs/Paloma-Sette_Projeto_EQA.pdf">
                                        <u>Final Presentation</u>
@@ -993,9 +1418,7 @@
                               <div class="panel-inner" id="lorepuc">
                                  <div class="text-scroll-right">Lore PUC</div>
                                  <div class="label" >
-                                    <div class="text"><p> GADemo is an open educational platform designed to provide an intuitive and interactive environment for learning and experimenting with Genetic Algorithms (GAs).
-
-                                       Created with accessibility and clarity in mind, the platform allows users to explore GA concepts through visual simulations and guided parameter manipulation — no prior coding experience required.
+                                    <div class="text"><p> LorePUC is a university social network app that won 3rd place at Hackeng 2018 during PUC-Rio's Engineering Week. The platform promotes continuous kindness among students through a credit-based system where helping others (tutoring, sharing information) earns points redeemable for academic event tickets and prizes. Features include peer evaluation system, real-time campus updates (library capacity, etc.), and forum-style information sharing, creating an internal social ecosystem that enhances student interaction and academic collaboration.
                                        </p></div>
                                     ● <a href="https://musical-kataifi-98bfa6.netlify.app">
                                        <u>Demo</u>
@@ -1042,62 +1465,34 @@
                         <!-- Article 1 -->
                         <div class="thoughts-card">
                            <div class="thoughts-card-image">
-                              <img src="assets/images/energy-article.jpg" alt="Smart Energy Article" />
+                              <img src="assets/images/heart-sound-project.png" alt="heart-sound-project" />
                            </div>
                            <div class="thoughts-card-content">
-                              <h3 class="thoughts-card-title">A energia também deve ser inteligente, não só os sistemas!</h3>
-                              <p class="thoughts-card-date">In submission 15-10-2025</p>
+                              <h3 class="thoughts-card-title">Classificação de Sons Cardíacos com Aprendizado Estatístico e Neural: Detecção de Sopros por Modelagem Morfológica, Topológica e Recorrente de Sinais de Ausculta</h3>
+                              <p class="thoughts-card-date">Under refinement</p>
                               <p class="thoughts-card-description">
-                                 A "energia inteligente" propõe otimizar o consumo de energia em sistemas de IA, equilibrando desempenho e impacto ambiental.
+                                 Heart Sound Classification research combining statistical and neural learning approaches for cardiac murmur detection through advanced signal processing and machine learning classifiers. Currently under academic review [abstract available on Overleaf].
                               </p>
-                              <a href="#" class="thoughts-read-more">Read More ></a>
+                              <a href="https://www.overleaf.com/read/dvxypwgjcjrq#4230fb" class="thoughts-read-more">Read More ></a>
                            </div>
                         </div>
                         
                         <!-- Article 2 -->
                         <div class="thoughts-card">
                            <div class="thoughts-card-image">
-                              <img src="assets/images/ai-ethics.jpg" alt="AI Ethics Article" />
+                              <img src="assets/images/starry_night.png" alt="Van_Gogh_Starry_Night" />
                            </div>
                            <div class="thoughts-card-content">
-                              <h3 class="thoughts-card-title">Ética em IA: Além dos algoritmos</h3>
-                              <p class="thoughts-card-date">Published 20-09-2025</p>
+                              <h3 class="thoughts-card-title">The Color Signature: Analyzing Art with K-Means clustering</h3>
+                              <p class="thoughts-card-date">In submission</p>
                               <p class="thoughts-card-description">
-                                 Explorando os desafios éticos na implementação de sistemas de inteligência artificial em ambientes industriais.
+                                 Computer vision method to quantify "Color Signatures" in artworks. Using Python, OpenCV and Scikit-learn to extract dominant color palettes via K-Means clustering.
                               </p>
-                              <a href="#" class="thoughts-read-more">Read More ></a>
+                              <a href="https://docs.google.com/document/d/1PB496xKfFKGyd7OUr7OS2HBsvd1aYZFrB2i4KQ7MFg0/edit?usp=sharing" class="thoughts-read-more">Read More ></a>
                            </div>
                         </div>
                         
-                        <!-- Article 3 -->
-                        <div class="thoughts-card">
-                           <div class="thoughts-card-image">
-                              <img src="assets/images/automation-future.jpg" alt="Automation Future Article" />
-                           </div>
-                           <div class="thoughts-card-content">
-                              <h3 class="thoughts-card-title">O futuro da automação industrial</h3>
-                              <p class="thoughts-card-date">Published 10-09-2025</p>
-                              <p class="thoughts-card-description">
-                                 Como a integração de IA e automação está transformando a indústria e criando novas oportunidades.
-                              </p>
-                              <a href="#" class="thoughts-read-more">Read More ></a>
-                           </div>
-                        </div>
                         
-                        <!-- Article 4 -->
-                        <div class="thoughts-card">
-                           <div class="thoughts-card-image">
-                              <img src="assets/images/machine-learning.jpg" alt="Machine Learning Article" />
-                           </div>
-                           <div class="thoughts-card-content">
-                              <h3 class="thoughts-card-title">Machine Learning na prática industrial</h3>
-                              <p class="thoughts-card-date">Published 05-09-2025</p>
-                              <p class="thoughts-card-description">
-                                 Casos reais de implementação de algoritmos de ML em processos industriais e seus resultados.
-                              </p>
-                              <a href="#" class="thoughts-read-more">Read More ></a>
-                           </div>
-                        </div>
                      </div>
                   </div>
                   
@@ -1106,8 +1501,6 @@
                   <div class="thoughts-dots" id="thoughtsDots">
                      <span class="dot active" data-slide="0"></span>
                      <span class="dot" data-slide="1"></span>
-                     <span class="dot" data-slide="2"></span>
-                     <span class="dot" data-slide="3"></span>
                   </div>
                </div>
             </div>
@@ -1549,8 +1942,8 @@
              });
            });
            
-           // Auto-play (optional)
-           setInterval(nextSlide, 5000);
+           // Auto-play (optional) - 8 segundos para leitura confortável
+           setInterval(nextSlide, 8000);
            
            // Touch/swipe support for mobile
            let startX = 0;
