@@ -724,6 +724,58 @@
         background-color: #333;
     }
     
+    /* Mobile: 6 bolinhas para 6 trabalhos individuais */
+    @media (max-width: 768px) {
+        .drawings-dots {
+            display: flex !important;
+            justify-content: center !important;
+            flex-wrap: wrap !important;
+            gap: 0.3rem !important;
+            margin-top: 1.5rem !important;
+        }
+        
+        .drawings-dots .dot {
+            width: 10px !important;
+            height: 10px !important;
+            margin: 0 2px !important;
+        }
+        
+        /* Mostrar todas as 6 bolinhas no mobile */
+        .drawings-dots .dot.mobile-only {
+            display: block !important;
+        }
+        
+        /* Mobile: 3 projetos empilhados (um acima do outro) */
+        .drawing-slide .row {
+            flex-direction: column !important;
+        }
+        
+        .drawing-slide .col-12 {
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+            margin-bottom: 1.5rem !important;
+        }
+        
+        .drawing-slide .d-none {
+            display: block !important;
+        }
+        
+        .drawing-slide .d-md-block {
+            display: block !important;
+        }
+        
+        .drawing-slide .d-lg-block {
+            display: block !important;
+        }
+    }
+    
+    /* Desktop: esconder bolinhas extras */
+    @media (min-width: 769px) {
+        .drawings-dots .dot.mobile-only {
+            display: none !important;
+        }
+    }
+    
     /* Mobile responsiveness for drawings carousel */
     @media (max-width: 768px) {
         .drawings-carousel-container {
@@ -781,6 +833,42 @@
     @media (max-width: 768px) {
         .projects-dots {
             margin-top: 1.5rem;
+        }
+    }
+    
+    /* Bordas redondas simples e elegantes */
+    .image-wrapper img {
+        border-radius: 20px !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .image-wrapper:hover img {
+        transform: scale(1.02) !important;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    /* Alinhar melhor a imagem com o texto */
+    .row.align-items-center {
+        align-items: flex-start !important;
+    }
+    
+    .col-12.col-lg-5 {
+        margin-top: 2rem !important;
+    }
+    
+    .col-12.col-lg {
+        margin-top: 1rem !important;
+    }
+    
+    @media (max-width: 991px) {
+        .col-12.col-lg-5 {
+            margin-top: 0 !important;
+            margin-bottom: 2rem !important;
+        }
+        
+        .col-12.col-lg {
+            margin-top: 0 !important;
         }
     }
   </style>
@@ -876,7 +964,7 @@
                 </div>
                 <div class="col-12 col-lg-5">
                     <div class="image-wrapper">
-                        <img src="assets/images/paloma-dark-mold.png" alt="Paloma Sette">
+                        <img src="assets/images/painting-veneza.jpg" alt="Paloma Sette">
                     </div>
                 </div>
             </div>
@@ -1159,7 +1247,7 @@
                             <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
                                 <div class="item-wrapper">
                                     <div class="item-img">
-                                                        <a href="umbrella.html"><img src="assets/images/umbrella.jpg" alt="O Guarda-chuva"></a>
+                                        <a href="umbrella.html"><img src="assets/images/umbrella.jpg" alt="O Guarda-chuva"></a>
                                     </div>
                                     <div class="item-content">
                                         <h5 class="item-title"><strong>O Guarda-chuva</strong></h5>
@@ -1186,7 +1274,6 @@
                             </div>
                         </div>
                     </div>
-                                        
                 </div>
             </div>
             
@@ -1194,6 +1281,8 @@
             <div class="drawings-dots" id="drawingsDots">
                 <span class="dot active" data-slide="0"></span>
                 <span class="dot" data-slide="1"></span>
+                <!-- Mobile: 6 bolinhas para 6 trabalhos individuais -->
+
             </div>
         </div>
     </div>
@@ -1403,14 +1492,44 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalDrawingSlides = drawingSlides.length;
     
     function showDrawingSlide(slideIndex) {
-        // Hide all slides
-        drawingSlides.forEach(slide => {
-            slide.classList.remove('active');
-        });
+        const isMobile = window.innerWidth <= 768;
         
-        // Show current slide
-        if (drawingSlides[slideIndex]) {
-            drawingSlides[slideIndex].classList.add('active');
+        if (isMobile) {
+            // Mobile: 6 bolinhas, 3 projetos empilhados por slide
+            if (slideIndex < 2) {
+                // Slides normais (0 e 1) - 3 projetos empilhados
+                drawingSlides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                
+                if (drawingSlides[slideIndex]) {
+                    drawingSlides[slideIndex].classList.add('active');
+                }
+            } else {
+                // Bolinhas extras (2-5) - mostrar trabalho individual
+                const allItems = document.querySelectorAll('.drawing-slide .item-wrapper');
+                
+                // Esconder todos os slides
+                drawingSlides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                
+                // Mostrar apenas o item selecionado
+                if (allItems[slideIndex]) {
+                    allItems[slideIndex].classList.add('active');
+                    // Ativar o slide que contém o item
+                    allItems[slideIndex].closest('.drawing-slide').classList.add('active');
+                }
+            }
+        } else {
+            // Desktop: comportamento normal (3 trabalhos por slide)
+            drawingSlides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            if (drawingSlides[slideIndex]) {
+                drawingSlides[slideIndex].classList.add('active');
+            }
         }
         
         // Update dots
