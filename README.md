@@ -260,7 +260,7 @@ Found a bug or have a suggestion?
 - Email: [paloma.sette@aluno.puc-rio.br](mailto:paloma.sette@aluno.puc-rio.br)
 - LinkedIn: [linkedin.com/in/palomasette](https://linkedin.com/in/paloma-sett)
 - GitHub: [@palomaflsette](https://github.com/palomaflsette)
-- Website: [palomaflsette.github.io](https://palomasette.com)
+- Website: [palomasette.com](https://palomasette.com)
 
 ## License
 
