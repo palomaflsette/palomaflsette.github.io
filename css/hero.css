@@ -1,0 +1,186 @@
+/*
+ * Hero Section Styles
+ * Hero section with video background and content
+ */
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+  text-align: center;
+}
+
+/* Video Background */
+.video-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content */
+.hero-logo-section {
+  margin-bottom: var(--spacing-lg, 2rem);
+}
+
+.hero-logo-section img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.hero-content-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-description {
+  color: #503b2b;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg, 2rem);
+}
+
+.hero-button-section .btn {
+  background-color: #6d3304;
+  border-color: #150f04;
+  padding: 12px 30px;
+  font-size: 1rem;
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .master-hero-section {
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: flex-start;
+    position: relative;
+  }
+  
+  .hero-logo-section img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .hero-button-section .btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+  
+  .video-hero video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-logo-section img {
+    max-width: 200px;
+  }
+  
+  .hero-description {
+    font-size: 0.95rem;
+  }
+  
+  .hero-button-section .btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-logo-section img {
+    max-width: 150px;
+  }
+  
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  
+  .hero-button-section .btn {
+    padding: 6px 18px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Large devices */
+@media (min-width: 1024px) {
+  .hero-logo-section img {
+    max-width: 350px;
+  }
+  
+  .hero-description {
+    font-size: 1.2rem;
+  }
+}
+
+/* Preloader */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg-white, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.wrap-preloader-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-wrap-hero {
+  position: relative;
+}
+
+.overlay-preloader-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, var(--color-bg-white, #ffffff) 100%);
+  animation: preloader-animation 1.5s ease-in-out infinite;
+}
+
+@keyframes preloader-animation {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}

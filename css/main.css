@@ -1,0 +1,536 @@
+/*
+ * Main Stylesheet - Paloma L. Sette Portfolio
+ * Consolidated and organized CSS structure
+ * Author: Paloma L. Sette
+ */
+
+/* ========================================
+   TABLE OF CONTENTS
+   ========================================
+   1. CSS Variables
+   2. Base & Reset
+   3. Typography
+   4. Layout & Containers
+   5. Navigation
+   6. Sections
+   7. Components
+   8. Utilities
+   9. Responsive Design
+   ======================================== */
+
+
+/* ========================================
+   1. CSS VARIABLES
+   ======================================== */
+:root {
+  /* Colors */
+  --color-primary: #2A2119;
+  --color-secondary: #6d3304;
+  --color-accent: #ff6b6b;
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-bg-main: #ebe8db;
+  --color-bg-white: #ffffff;
+  --color-bg-light: #f8f9fa;
+  --color-border: rgba(42, 33, 25, 0.3);
+  
+  /* Typography */
+  --font-primary: 'Instrument Sans', sans-serif;
+  --font-secondary: 'Instrument Serif', serif;
+  --font-fallback: 'Georgia', 'Times New Roman', serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+  
+  /* Border radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+  
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+  --shadow-lg: 0 20px 40px rgba(0,0,0,0.1);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+
+/* ========================================
+   2. BASE & RESET
+   ======================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-normal);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+
+/* ========================================
+   3. TYPOGRAPHY
+   ======================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+h5 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
+h6 { font-size: clamp(1rem, 1.5vw, 1.25rem); }
+
+p {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.8;
+}
+
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+
+/* ========================================
+   4. LAYOUT & CONTAINERS
+   ======================================== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section {
+  padding: var(--spacing-xxl) 0;
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.content-wrapper {
+  background: var(--color-bg-white);
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Section separators */
+.section-separator::after,
+.section-separator::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-border), transparent);
+}
+
+.section-separator::before { top: 0; }
+.section-separator::after { bottom: 0; }
+
+
+/* ========================================
+   5. NAVIGATION
+   ======================================== */
+.master-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.nav-link {
+  position: relative;
+  padding: var(--spacing-xs) var(--spacing-md);
+  color: var(--color-primary);
+  font-weight: 600;
+  transition: var(--transition-normal);
+}
+
+.nav-link:hover {
+  color: var(--color-secondary);
+}
+
+.nav-link-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-secondary);
+  transition: width var(--transition-normal);
+}
+
+.nav-link:hover .nav-link-bg {
+  width: 100%;
+}
+
+
+/* ========================================
+   6. SECTIONS
+   ======================================== */
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.video-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+/* About Section */
+.about-section {
+  background: var(--color-bg-main);
+}
+
+/* Projects Section */
+.projects-section {
+  background: var(--color-bg-white);
+}
+
+/* Thoughts Section */
+.thoughts {
+  padding: 80px 0;
+  background-color: var(--color-bg-main);
+  position: relative;
+}
+
+.thoughts::before,
+.thoughts::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-border), transparent);
+}
+
+.thoughts::before { top: 0; }
+.thoughts::after { bottom: 0; }
+
+/* Art Gallery Section */
+.art-gallery-section {
+  background: var(--color-bg-light);
+}
+
+
+/* ========================================
+   7. COMPONENTS
+   ======================================== */
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: var(--radius-md);
+  transition: var(--transition-normal);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--color-secondary);
+  color: var(--color-bg-white);
+}
+
+.btn-primary:hover {
+  background-color: #150f04;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Cards */
+.card {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.card-image {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: var(--spacing-xl);
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.card-description {
+  font-size: 16px;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Image Wrapper */
+.image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  max-width: 95%;
+  width: auto;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* Image Captions */
+.image-caption {
+  padding: 2px 0;
+  margin-top: 3px;
+  text-align: center;
+}
+
+.caption-text {
+  color: var(--color-text-light);
+  font-size: 0.75rem;
+  line-height: 1.2;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+
+/* ========================================
+   8. UTILITIES
+   ======================================== */
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: var(--spacing-xs); }
+.mb-2 { margin-bottom: var(--spacing-sm); }
+.mb-3 { margin-bottom: var(--spacing-md); }
+.mb-4 { margin-bottom: var(--spacing-lg); }
+.mb-5 { margin-bottom: var(--spacing-xl); }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: var(--spacing-xs); }
+.mt-2 { margin-top: var(--spacing-sm); }
+.mt-3 { margin-top: var(--spacing-md); }
+.mt-4 { margin-top: var(--spacing-lg); }
+.mt-5 { margin-top: var(--spacing-xl); }
+
+.p-0 { padding: 0; }
+.p-1 { padding: var(--spacing-xs); }
+.p-2 { padding: var(--spacing-sm); }
+.p-3 { padding: var(--spacing-md); }
+.p-4 { padding: var(--spacing-lg); }
+.p-5 { padding: var(--spacing-xl); }
+
+.d-none { display: none; }
+.d-block { display: block; }
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.w-100 { width: 100%; }
+.h-100 { height: 100%; }
+
+
+/* ========================================
+   9. RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets and below */
+@media (max-width: 991px) {
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .content-wrapper {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  :root {
+    --spacing-xl: 2rem;
+    --spacing-xxl: 3rem;
+  }
+  
+  body {
+    font-size: 0.95rem;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .section {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .content-wrapper {
+    padding: var(--spacing-md) var(--spacing-sm);
+    border-radius: var(--radius-md);
+  }
+  
+  .nav-link {
+    padding: var(--spacing-xs);
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+  
+  .card-content {
+    padding: var(--spacing-md);
+  }
+  
+  .card-title {
+    font-size: 20px;
+  }
+  
+  .card-description {
+    font-size: 14px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+  
+  .caption-text {
+    font-size: 0.7rem;
+  }
+}
