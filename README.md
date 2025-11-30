@@ -1,61 +1,61 @@
-# 🎨 Paloma L. Sette - Portfolio
+# Paloma L. Sette - Portfolio
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fpalomaflsette.github.io)](https://palomaflsette.github.io)
 
-Portfolio pessoal de Paloma L. Sette - Estudante de PhD em Harvard e Pesquisadora/Desenvolvedora de AI/ML na Ford Motors Company.
+Personal portfolio of Paloma L. Sette - PhD Student at Harvard and AI/ML Researcher/Developer at Ford Motor Company.
 
-## 🌟 Sobre
+## About
 
-Este é meu portfolio pessoal onde compartilho:
-- 💼 **Projetos** de pesquisa e desenvolvimento
-- 📝 **Pensamentos** sobre tecnologia e ciência
-- 🎨 **Arte** e poesia
-- 📚 **Experiências** acadêmicas e profissionais
+This is my personal portfolio where I share:
+- **Research & Development Projects**
+- **Thoughts** on technology and science
+- **Art** and poetry
+- **Academic and Professional** experiences
 
-## ✨ Reorganização Completa (v2.0)
+## Complete Reorganization (v2.0)
 
-Este projeto passou por uma **reorganização completa** para seguir melhores práticas modernas de desenvolvimento web!
+This project underwent a **complete reorganization** to follow modern web development best practices.
 
-### 🎯 O Que Mudou?
+### What Changed?
 
-#### Antes ❌
-- CSS inline massivo (1000+ linhas)
-- Estilos duplicados em múltiplos arquivos
-- Estrutura desorganizada
-- Difícil manutenção
+#### Before
+- Massive inline CSS (1000+ lines)
+- Duplicate styles across multiple files
+- Disorganized structure
+- Difficult maintenance
 
-#### Agora ✅
-- **CSS Modular**: 7 arquivos organizados por seção
-- **JavaScript Modular**: 3 arquivos separados por funcionalidade
-- **Variáveis CSS**: Sistema de design consistente
-- **Documentação Completa**: Guias e exemplos
-- **Responsivo**: Testado em todos os dispositivos
-- **Performance**: Otimizado e escalável
+#### Now
+- **Modular CSS**: 7 files organized by section
+- **Modular JavaScript**: 3 files separated by functionality
+- **CSS Variables**: Consistent design system
+- **Complete Documentation**: Guides and examples
+- **Responsive**: Tested across all devices
+- **Performance**: Optimized and scalable
 
-## 📁 Estrutura do Projeto
+## Project Structure
 
 ```
 palomaflsette.github.io/
-├── css/                    # CSS modular e organizado
-│   ├── main.css           # Base, variáveis, componentes
-│   ├── hero.css           # Seção hero
-│   ├── about.css          # Sobre mim
-│   ├── projects.css       # Projetos
+├── css/                    # Modular and organized CSS
+│   ├── main.css           # Base, variables, components
+│   ├── hero.css           # Hero section
+│   ├── about.css          # About me
+│   ├── projects.css       # Projects
 │   ├── thoughts.css       # Blog
-│   ├── skills.css         # Habilidades
-│   └── art-gallery.css    # Galeria de arte
+│   ├── skills.css         # Skills
+│   └── art-gallery.css    # Art gallery
 │
-├── js/                    # JavaScript modular
-│   ├── main.js           # Funcionalidade core
-│   ├── navigation.js     # Menu e navegação
-│   └── carousel.js       # Carrosséis
+├── js/                    # Modular JavaScript
+│   ├── main.js           # Core functionality
+│   ├── navigation.js     # Menu and navigation
+│   └── carousel.js       # Carousels
 │
-├── images/               # Imagens organizadas
-├── vendor/               # Bibliotecas externas
-├── art-gallery/          # Galeria de arte
-├── index.html            # Página principal
-└── docs/                 # Documentação
+├── images/               # Organized images
+├── vendor/               # External libraries
+├── art-gallery/          # Art gallery
+├── index.html            # Main page
+└── docs/                 # Documentation
     ├── REORGANIZATION.md
     ├── MIGRATION-GUIDE.md
     ├── QUICK-START.md
@@ -63,259 +63,259 @@ palomaflsette.github.io/
     └── CHECKLIST.md
 ```
 
-## 🚀 Começando
+## Getting Started
 
-### Opção 1: Ver o Site
-Acesse: [https://palomaflsette.github.io](https://palomaflsette.github.io)
+### Option 1: View the Website
+Visit: [https://palomaflsette.github.io](https://palomaflsette.github.io)
 
-### Opção 2: Rodar Localmente
+### Option 2: Run Locally
 
 ```bash
-# Clone o repositório
+# Clone the repository
 git clone https://github.com/palomaflsette/palomaflsette.github.io.git
 
-# Entre na pasta
+# Enter the folder
 cd palomaflsette.github.io
 
-# Abra no navegador
-# Opção A: Usando Python
+# Open in browser
+# Option A: Using Python
 python -m http.server 8000
 
-# Opção B: Usando Node.js
+# Option B: Using Node.js
 npx http-server
 
-# Acesse http://localhost:8000
+# Access http://localhost:8000
 ```
 
-### Opção 3: Desenvolvimento
+### Option 3: Development
 
 ```bash
-# Clone e crie branch
+# Clone and create branch
 git clone https://github.com/palomaflsette/palomaflsette.github.io.git
 cd palomaflsette.github.io
-git checkout -b feature/minha-feature
+git checkout -b feature/my-feature
 
-# Instale dependências (se usar npm)
+# Install dependencies (if using npm)
 npm install
 
-# Desenvolva...
+# Develop...
 
-# Commit e push
+# Commit and push
 git add .
-git commit -m "feat: minha nova feature"
-git push origin feature/minha-feature
+git commit -m "feat: add new feature"
+git push origin feature/my-feature
 ```
 
-## 📚 Documentação
+## Documentation
 
-### Para Usuários Iniciantes
-👉 **[QUICK-START.md](QUICK-START.md)** - Comece aqui!
-- Template HTML pronto para usar
-- Exemplos práticos
-- 5 minutos para começar
+### For Beginners
+**[QUICK-START.md](QUICK-START.md)** - Start here!
+- Ready-to-use HTML template
+- Practical examples
+- Get started in 5 minutes
 
-### Para Entender a Estrutura
-👉 **[REORGANIZATION.md](REORGANIZATION.md)**
-- Visão geral da arquitetura
-- Variáveis CSS disponíveis
-- Sistema de componentes
+### To Understand the Structure
+**[REORGANIZATION.md](REORGANIZATION.md)**
+- Architecture overview
+- Available CSS variables
+- Component system
 
-### Para Migrar Código Antigo
-👉 **[MIGRATION-GUIDE.md](MIGRATION-GUIDE.md)**
-- Guia passo a passo
-- Antes e depois
-- Solução de problemas
+### To Migrate Old Code
+**[MIGRATION-GUIDE.md](MIGRATION-GUIDE.md)**
+- Step-by-step guide
+- Before and after
+- Troubleshooting
 
-### Para Acompanhar Progresso
-👉 **[CHECKLIST.md](CHECKLIST.md)**
-- Checklist completo
-- Progresso visual
-- Fases organizadas
+### To Track Progress
+**[CHECKLIST.md](CHECKLIST.md)**
+- Complete checklist
+- Visual progress
+- Organized phases
 
-### Resumo Executivo
-👉 **[SUMMARY.md](SUMMARY.md)**
-- Métricas e melhorias
-- Recursos criados
-- Próximos passos
+### Executive Summary
+**[SUMMARY.md](SUMMARY.md)**
+- Metrics and improvements
+- Created resources
+- Next steps
 
-## 🛠️ Tecnologias
+## Technologies
 
 ### Frontend
-- **HTML5** - Estrutura semântica
-- **CSS3** - Estilos modernos com variáveis CSS
-- **JavaScript ES6+** - Funcionalidades interativas
-- **Bootstrap 5** - Grid system e componentes
-- **Font Awesome 6** - Ícones
+- **HTML5** - Semantic structure
+- **CSS3** - Modern styles with CSS variables
+- **JavaScript ES6+** - Interactive functionality
+- **Bootstrap 5** - Grid system and components
+- **Font Awesome 6** - Icons
 
-### Ferramentas
-- **Git** - Controle de versão
-- **GitHub Pages** - Hospedagem
+### Tools
+- **Git** - Version control
+- **GitHub Pages** - Hosting
 - **VS Code** - Editor
 
-### Fontes
-- **Instrument Sans** - Fonte principal
-- **Instrument Serif** - Fonte secundária
-- **Georgia** - Fonte fallback
+### Fonts
+- **Instrument Sans** - Main font
+- **Instrument Serif** - Secondary font
+- **Georgia** - Fallback font
 
-## 🎨 Recursos
+## Features
 
-### Variáveis CSS
+### CSS Variables
 ```css
-/* Cores principais */
+/* Main colors */
 --color-primary: #2A2119;
 --color-secondary: #6d3304;
 --color-accent: #ff6b6b;
 
-/* Espaçamentos */
+/* Spacing */
 --spacing-sm: 1rem;
 --spacing-md: 1.5rem;
 --spacing-lg: 2rem;
 
-/* E muito mais... */
+/* And much more... */
 ```
 
-### Componentes Prontos
-- Botões responsivos
-- Cards com hover effects
-- Carrosséis com swipe
-- Navegação smooth scroll
-- Layout responsivo completo
+### Ready-to-Use Components
+- Responsive buttons
+- Cards with hover effects
+- Carousels with swipe support
+- Smooth scroll navigation
+- Complete responsive layout
 
-### Classes Utilitárias
-- Espaçamentos (mb-1 a mb-5, p-1 a p-5)
+### Utility Classes
+- Spacing (mb-1 to mb-5, p-1 to p-5)
 - Layout (flex-center, w-100, h-100)
-- Texto (text-center, text-justify)
+- Text (text-center, text-justify)
 - Display (d-none, d-flex, d-grid)
 
-## 📱 Responsividade
+## Responsiveness
 
-Testado e otimizado para:
-- ✅ Desktop (> 1200px)
-- ✅ Laptop (1024px)
-- ✅ Tablet (768px)
-- ✅ Mobile Large (414px)
-- ✅ Mobile Medium (375px)
-- ✅ Mobile Small (320px)
+Tested and optimized for:
+- Desktop (> 1200px)
+- Laptop (1024px)
+- Tablet (768px)
+- Mobile Large (414px)
+- Mobile Medium (375px)
+- Mobile Small (320px)
 
-## 🌐 Navegadores Suportados
+## Supported Browsers
 
-- ✅ Chrome/Edge (últimas 2 versões)
-- ✅ Firefox (últimas 2 versões)
-- ✅ Safari (últimas 2 versões)
-- ✅ Mobile Safari (iOS 12+)
-- ✅ Chrome Mobile (Android 8+)
+- Chrome/Edge (latest 2 versions)
+- Firefox (latest 2 versions)
+- Safari (latest 2 versions)
+- Mobile Safari (iOS 12+)
+- Chrome Mobile (Android 8+)
 
-## 📈 Performance
+## Performance
 
-- ⚡ First Contentful Paint < 1.5s
-- ⚡ Time to Interactive < 3s
-- ⚡ CSS otimizado e modular
-- ⚡ JavaScript assíncrono
-- ⚡ Imagens otimizadas (em progresso)
+- First Contentful Paint < 1.5s
+- Time to Interactive < 3s
+- Optimized and modular CSS
+- Asynchronous JavaScript
+- Optimized images (in progress)
 
-## 🤝 Contribuindo
+## Contributing
 
-Contribuições são bem-vindas! Se você quiser contribuir:
+Contributions are welcome! If you'd like to contribute:
 
-1. Fork o projeto
-2. Crie uma branch (`git checkout -b feature/NovaFeature`)
-3. Commit suas mudanças (`git commit -m 'feat: Adiciona nova feature'`)
-4. Push para a branch (`git push origin feature/NovaFeature`)
-5. Abra um Pull Request
+1. Fork the project
+2. Create a branch (`git checkout -b feature/NewFeature`)
+3. Commit your changes (`git commit -m 'feat: Add new feature'`)
+4. Push to the branch (`git push origin feature/NewFeature`)
+5. Open a Pull Request
 
-### Guia de Contribuição
-- Use a estrutura modular existente
-- Siga os padrões de CSS e JS estabelecidos
-- Use variáveis CSS em vez de valores hardcoded
-- Teste em múltiplos dispositivos
-- Documente mudanças significativas
+### Contribution Guidelines
+- Use the existing modular structure
+- Follow established CSS and JS patterns
+- Use CSS variables instead of hardcoded values
+- Test across multiple devices
+- Document significant changes
 
-## 📜 Estrutura de Commits
+## Commit Structure
 
-Seguimos [Conventional Commits](https://www.conventionalcommits.org/):
+We follow [Conventional Commits](https://www.conventionalcommits.org/):
 
 ```
-feat: Nova funcionalidade
-fix: Correção de bug
-docs: Documentação
-style: Formatação
-refactor: Refatoração
-test: Testes
-chore: Manutenção
+feat: New feature
+fix: Bug fix
+docs: Documentation
+style: Formatting
+refactor: Refactoring
+test: Tests
+chore: Maintenance
 ```
 
-## 🐛 Bugs e Sugestões
+## Bugs and Suggestions
 
-Encontrou um bug ou tem uma sugestão?
+Found a bug or have a suggestion?
 
-1. Verifique se já existe uma [issue](https://github.com/palomaflsette/palomaflsette.github.io/issues)
-2. Senão, [crie uma nova issue](https://github.com/palomaflsette/palomaflsette.github.io/issues/new)
-3. Descreva o problema ou sugestão detalhadamente
-4. Adicione screenshots se relevante
+1. Check if an [issue](https://github.com/palomaflsette/palomaflsette.github.io/issues) already exists
+2. If not, [create a new issue](https://github.com/palomaflsette/palomaflsette.github.io/issues/new)
+3. Describe the problem or suggestion in detail
+4. Add screenshots if relevant
 
-## 📞 Contato
+## Contact
 
 **Paloma L. Sette**
 
-- 📧 Email: [paloma.sette@aluno.puc-rio.br](mailto:paloma.sette@aluno.puc-rio.br)
-- 💼 LinkedIn: [linkedin.com/in/palomasette](https://linkedin.com/in/palomasette)
-- 🐙 GitHub: [@palomaflsette](https://github.com/palomaflsette)
-- 🌐 Website: [palomaflsette.github.io](https://palomaflsette.github.io)
+- Email: [paloma.sette@aluno.puc-rio.br](mailto:paloma.sette@aluno.puc-rio.br)
+- LinkedIn: [linkedin.com/in/palomasette](https://linkedin.com/in/palomasette)
+- GitHub: [@palomaflsette](https://github.com/palomaflsette)
+- Website: [palomaflsette.github.io](https://palomaflsette.github.io)
 
-## 📄 Licença
+## License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
 
-## 🙏 Agradecimentos
+## Acknowledgments
 
-- **Bootstrap** - Framework CSS
-- **Font Awesome** - Ícones
-- **Google Fonts** - Tipografia
-- **GitHub Pages** - Hospedagem gratuita
+- **Bootstrap** - CSS Framework
+- **Font Awesome** - Icons
+- **Google Fonts** - Typography
+- **GitHub Pages** - Free hosting
 
-## 🎯 Roadmap
+## Roadmap
 
-### v2.0 (Atual) ✅
-- [x] Reorganização completa da estrutura
-- [x] CSS modular
-- [x] JavaScript modular
-- [x] Documentação completa
+### v2.0 (Current)
+- [x] Complete structure reorganization
+- [x] Modular CSS
+- [x] Modular JavaScript
+- [x] Complete documentation
 
-### v2.1 (Próximo)
-- [ ] Migração de todas as páginas
-- [ ] Otimização de imagens (WebP)
+### v2.1 (Next)
+- [ ] Migration of all pages
+- [ ] Image optimization (WebP)
 - [ ] Lazy loading
 - [ ] Critical CSS
 
-### v2.2 (Futuro)
+### v2.2 (Future)
 - [ ] Service Worker (PWA)
-- [ ] Blog com CMS
-- [ ] Testes automatizados
+- [ ] Blog with CMS
+- [ ] Automated testing
 - [ ] CI/CD pipeline
 
-### v3.0 (Visão)
-- [ ] Framework moderno (React/Vue)
-- [ ] Backend próprio
-- [ ] API para projetos
-- [ ] Área administrativa
+### v3.0 (Vision)
+- [ ] Modern framework (React/Vue)
+- [ ] Custom backend
+- [ ] Projects API
+- [ ] Administrative area
 
-## 📊 Status do Projeto
+## Project Status
 
 ```
-Reorganização:  ████████████████████ 100%
-Migração:       ███░░░░░░░░░░░░░░░░░  15%
-Otimização:     ░░░░░░░░░░░░░░░░░░░░   0%
-Testes:         ░░░░░░░░░░░░░░░░░░░░   0%
+Reorganization:  ████████████████████ 100%
+Migration:       ███░░░░░░░░░░░░░░░░░  15%
+Optimization:    ░░░░░░░░░░░░░░░░░░░░   0%
+Testing:         ░░░░░░░░░░░░░░░░░░░░   0%
 
-Progresso Geral: 30%
+Overall Progress: 30%
 ```
 
-## ⭐ Mostre Seu Apoio
+## Show Your Support
 
-Se você gostou deste projeto, considere dar uma ⭐ no repositório!
+If you liked this project, consider giving it a star!
 
 ---
 
-**Construído com ❤️ por Paloma L. Sette**
+**Built with ❤️ by Paloma L. Sette**
 
-*Última atualização: Novembro 2025*
+*Last update: November 2025*
