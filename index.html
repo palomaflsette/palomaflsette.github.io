@@ -2064,6 +2064,9 @@
            
            // Função para navegar para um projeto específico
            function goToProject(projectId, immediate = false) {
+             // Remover # se vier com ele para evitar ##
+             projectId = projectId.replace(/^#+/, '');
+             
              const projectIndex = projectMap[projectId];
              if (projectIndex !== undefined && tabs[projectIndex]) {
                
@@ -2079,7 +2082,7 @@
                  if (projectsSection) {
                    projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                    
-                   // Restaurar o hash na URL após o scroll
+                   // Restaurar o hash na URL após o scroll (sem duplicar #)
                    if (immediate) {
                      setTimeout(() => {
                        history.replaceState(null, null, '#' + projectId);
@@ -2102,9 +2105,11 @@
            document.querySelectorAll('a[href^="#"]').forEach(link => {
              link.addEventListener('click', (e) => {
                const href = link.getAttribute('href');
-               if (href.startsWith('#') && projectMap[href.substring(1)]) {
+               // Remover todos os # do início para pegar só o ID
+               const hashId = href.replace(/^#+/, '');
+               if (hashId && projectMap[hashId]) {
                  e.preventDefault();
-                 goToProject(href.substring(1));
+                 goToProject(hashId);
                }
              });
            });
