@@ -258,9 +258,9 @@ Found a bug or have a suggestion?
 **Paloma L. Sette**
 
 - Email: [paloma.sette@aluno.puc-rio.br](mailto:paloma.sette@aluno.puc-rio.br)
-- LinkedIn: [linkedin.com/in/palomasette](https://linkedin.com/in/palomasette)
+- LinkedIn: [linkedin.com/in/palomasette](https://linkedin.com/in/paloma-sett)
 - GitHub: [@palomaflsette](https://github.com/palomaflsette)
-- Website: [palomaflsette.github.io](https://palomaflsette.github.io)
+- Website: [palomaflsette.github.io](https://palomasette.com)
 
 ## License
 
